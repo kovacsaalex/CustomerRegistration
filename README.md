@@ -3,5 +3,5 @@
 
 This application made for hungarian financial advisor. 
 You can registrate clients, loans and savings. 
-The data is stored in SQL database.
+The data is stored in MySQL database.
 
