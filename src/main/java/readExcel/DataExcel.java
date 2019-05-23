@@ -12,7 +12,7 @@ import ltp.Ltp;
 import repository.ReposExcel;
 
 /**
- *
+ * Get data from excel. Clients, Loans, Savings
  * @author alexkovacs
  */
 public class DataExcel extends ReadExcel implements ReposExcel{

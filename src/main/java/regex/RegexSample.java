@@ -4,7 +4,7 @@ import java.util.regex.Pattern;
 import javax.swing.ImageIcon;
 
 /**
- *
+ * This class Authorise the forms data 
  * @author alexkovacs
  */
 public class RegexSample {

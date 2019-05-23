@@ -1,5 +1,7 @@
 package database;
 
+
+
 import repository.*;
 import client.Client;
 import loan.Loan;
@@ -15,6 +17,9 @@ import java.util.ArrayList;
 import java.util.List;
 import lists.AllKindList;
 
+/**
+ * This class make a connection with MySql database
+ */
 public class dataBaseSql implements ReposDataBase {
 
     private Connection connection = null;
@@ -58,13 +63,22 @@ public class dataBaseSql implements ReposDataBase {
 
     }
 
-    // *id változások visszajelzése (Ha a rögzités sikeres)
+    /**
+     * id változások visszajelzése (Ha a rögzités sikeres) / if add a new client successfully get an Id
+     * @return 
+     */
+    
     @Override
     public int sqlIdCount() {
         return id;
     }
 
     // Client ******************
+    
+    /**
+     * Insert new client to the MySQL database with personal data
+     * @param adat 
+     */
     @Override
     public void insertClient(Client adat) {
 
@@ -101,6 +115,11 @@ public class dataBaseSql implements ReposDataBase {
         }
     }
 
+    /**
+     * loan data link with the clients
+     * @param adat
+     * @throws SQLException 
+     */
     @Override
     public void insertClientToLoan(Client adat) throws SQLException {
         try (PreparedStatement insertNewClient = this.getConnection().prepareStatement("INSERT INTO customer (`Last Name`, `First Name`, `Maiden Name`, `Email`, `Birth Place`, `Mother Name`,"
@@ -140,6 +159,11 @@ public class dataBaseSql implements ReposDataBase {
         }
     }
 
+    /**
+     * List all clients from the database
+     * @return
+     * @throws SQLException 
+     */
     @Override
     public List<Client> findAllClients() throws SQLException {
         ResultSet all = this.getConnection().prepareStatement("SELECT * from customer").executeQuery();
@@ -147,6 +171,12 @@ public class dataBaseSql implements ReposDataBase {
         return ret;
     }
 
+    /**
+     * Find client in the database by ID
+     * @param id
+     * @return
+     * @throws SQLException 
+     */
     @Override
     public Client findbyIdClients(int id) throws SQLException {
 
@@ -163,6 +193,12 @@ public class dataBaseSql implements ReposDataBase {
         return null;
     }
 
+    /**
+     * If you list all clients from the database, you can search in this list
+     * @param ValToSearch
+     * @return
+     * @throws SQLException 
+     */
     @Override
     public List<Client> searchFromClients(String ValToSearch) throws SQLException {
         ResultSet searchClient = this.getConnection().
@@ -188,7 +224,11 @@ public class dataBaseSql implements ReposDataBase {
         List<Client> ret = makeList(searchClient);
         return ret;
     }
-
+    
+/**
+ * Modify client 
+ * @param client 
+ */
     @Override
     public void update(Client client) {
 
@@ -256,6 +296,11 @@ public class dataBaseSql implements ReposDataBase {
         return sz;
     }
 
+    /**
+     * Delete client from the database (Can't undo!!)
+     * @param id
+     * @throws SQLException 
+     */
     @Override
     public void ClientDelete(int id) throws SQLException {
         PreparedStatement deleteClientById = this.getConnection().prepareStatement("delete from customer where `Id` =?");
@@ -264,6 +309,10 @@ public class dataBaseSql implements ReposDataBase {
     }
 
     // Loan ******************
+    /**
+     * Insert new Loan to the MySQL database with data
+     * @param adat 
+     */
     @Override
     public void insertLoan(Loan adat) {
         try {
@@ -306,6 +355,10 @@ public class dataBaseSql implements ReposDataBase {
         }
     }
 
+    /**
+     * Modify loan data
+     * @param loan 
+     */
     @Override
     public void update(Loan loan) {
         try {
@@ -331,6 +384,11 @@ public class dataBaseSql implements ReposDataBase {
         }
     }
    
+    /**
+     * List all loans
+     * @return
+     * @throws SQLException 
+     */
     @Override
     public List<Loan> findAllLoans() throws SQLException {
         ResultSet all = this.getConnection().prepareStatement("SELECT * from loan").executeQuery();
@@ -338,6 +396,12 @@ public class dataBaseSql implements ReposDataBase {
         return retltp;
     }
 
+    /**
+     * find loan by Id
+     * @param id
+     * @return
+     * @throws SQLException 
+     */
     @Override
     public Loan findByIdLoan(int id) throws SQLException {
         PreparedStatement fIdLoan = this.getConnection().prepareStatement("SELECT * from loan WHERE `Id Loan`=?;");
@@ -352,6 +416,12 @@ public class dataBaseSql implements ReposDataBase {
         return null;
     }
 
+    /**
+     * If you list all loans you can search inside
+     * @param ValToSearch
+     * @return
+     * @throws SQLException 
+     */
     @Override
     public List<Loan> searchFromLoan(String ValToSearch) throws SQLException {
 
@@ -389,6 +459,11 @@ public class dataBaseSql implements ReposDataBase {
         return sz;
     }
 
+    /**
+     * Delete loan (Can't undo!!)
+     * @param id
+     * @throws SQLException 
+     */
     @Override
     public void LoanDelete(int id) throws SQLException {
         PreparedStatement deleteLoanById = this.getConnection().prepareStatement("delete from loan where `Id Loan` =?");
@@ -397,6 +472,10 @@ public class dataBaseSql implements ReposDataBase {
     }
 
     // LTP ******************
+    /**
+     * Insert savings (Hungarian LTP) data to MySql database link with clients
+     * @param adat 
+     */
     @Override
     public void insertLtp(Ltp adat) {
         try {
@@ -421,6 +500,10 @@ public class dataBaseSql implements ReposDataBase {
         }
     }
 
+    /**
+     * Modify savings
+     * @param ltp 
+     */
     @Override
     public void update(Ltp ltp) {
         try {
@@ -437,6 +520,11 @@ public class dataBaseSql implements ReposDataBase {
         }
     }
 
+    /**
+     * List all savings
+     * @return
+     * @throws SQLException 
+     */
     @Override
     public List<Ltp> findAllLtp() throws SQLException {
 
@@ -444,7 +532,13 @@ public class dataBaseSql implements ReposDataBase {
         List<Ltp> retltp = makeLtpList(all);
         return retltp;
     }
-
+    
+/**
+ * Find savings by Id
+ * @param id
+ * @return
+ * @throws SQLException 
+ */
     @Override
     public Ltp findbyIdLtp(int id) throws SQLException {
         PreparedStatement fIdLtp = this.getConnection().prepareStatement("SELECT * from savings WHERE `Id Savings`=?;");
@@ -459,6 +553,12 @@ public class dataBaseSql implements ReposDataBase {
         return null;
     }
 
+    /**
+     * If you list all saving you can search inside
+     * @param ValToSearch
+     * @return
+     * @throws SQLException 
+     */
     @Override
     public List<Ltp> searchFromLtp(String ValToSearch) throws SQLException {
         ResultSet searchltp = this.getConnection().prepareStatement("SELECT `Id Savings`,Amount,Start,Term,End,Piece,`Id customer`,`Last Name`,`First Name` from savings, customer WHERE CONCAT(`Id Savings`,`Amount`, `Start`, `Term`, `End`, `Piece`,`Id Customer`, `Last Name`,`First Name`) LIKE '%" + ValToSearch + "%'").executeQuery();
@@ -489,6 +589,11 @@ public class dataBaseSql implements ReposDataBase {
         return data;
     }
 
+    /**
+     * Delete savings (Can't undo!!)
+     * @param id
+     * @throws SQLException 
+     */
     @Override
     public void LtpDelete(int id) throws SQLException {
         PreparedStatement deleteLtpById = this.getConnection().prepareStatement("delete from savings where `Id Savings` =?");
@@ -497,6 +602,11 @@ public class dataBaseSql implements ReposDataBase {
     }
 
     //   Mixed lists ****************
+    /**
+     * You can list clients,loans,savings in one list
+     * @return
+     * @throws SQLException 
+     */
     @Override
     public List<AllKindList> allKindList() throws SQLException {
 
@@ -517,6 +627,12 @@ public class dataBaseSql implements ReposDataBase {
         return retall;
     }
 
+    /**
+     * You can list clients,loans,savings in one list and search inside
+     * @param ValToSearch
+     * @return
+     * @throws SQLException 
+     */
     @Override
     public List<AllKindList> searhFromAllKindLists(String ValToSearch) throws SQLException {
         ResultSet searchAllKind = this.getConnection().prepareStatement("SELECT `customer`.`Id`,`loan`.`Id loan`,`savings`.`Id savings`,"
@@ -544,6 +660,11 @@ public class dataBaseSql implements ReposDataBase {
         return data;
     }
     
+    /**
+     * List loans with link clients
+     * @return
+     * @throws SQLException 
+     */
      @Override
     public List<AllKindList> ClientLoanList() throws SQLException {
           ResultSet clientLoan = this.getConnection().prepareStatement("SELECT `customer`.`Id`,`loan`.`Id loan`,`Last Name`, `First Name`,`loan`.`Amount`,`loan`.`Start`,`loan`.`End` from loan,customer INNER JOIN Customer_to_Loan ON `Id customer`=`Id`;").executeQuery();
