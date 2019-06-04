@@ -30,6 +30,8 @@ public class dataBaseSql implements ReposDataBase {
     }
 
     private Connection openConnection() {
+       
+
         try {
             this.connection = DriverManager.getConnection("jdbc:mysql://localhost:3306/database?useLegacyDatetimeCode=false&serverTimezone=Europe/Budapest", "root", "12345678");
         } catch (SQLException ex) {
