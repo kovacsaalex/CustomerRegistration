@@ -6,63 +6,27 @@ import repository.*;
 import client.Client;
 import loan.Loan;
 import ltp.Ltp;
-import java.sql.Connection;
-import java.sql.DriverManager;
-import java.sql.PreparedStatement;
-import java.sql.ResultSet;
-import java.sql.SQLException;
-import java.sql.Date;
+
+import java.sql.*;
 import java.time.LocalDate;
 import java.util.ArrayList;
 import java.util.List;
 import lists.AllKindList;
 
 /**
- * This class make a connection with MySql database
+ * This class make SQL Query with MySql database
  */
 public class dataBaseSql implements ReposDataBase {
 
-    private Connection connection = null;
+    DbConnectSql cn = new DbConnectSql();
     int id = 0;
 
     public dataBaseSql() {
-
     }
 
-    private Connection openConnection() {
-       
-
-        try {
-            this.connection = DriverManager.getConnection("jdbc:mysql://localhost:3306/database?useLegacyDatetimeCode=false&serverTimezone=Europe/Budapest", "root", "12345678");
-        } catch (SQLException ex) {
-            System.err.println("Hiba történt az adatbáziskapcsolatban! Üzenet: " + ex.getMessage());
-        }
-        return this.connection;
-    }
 
     public Connection getConnection() {
-        if (this.connection == null) {
-            this.openConnection();
-        }
-        return this.connection;
-    }
-
-    private Connection closeConnection() {
-        try {
-            if (connection != null) {
-                connection.close();
-            }
-        } catch (Exception ex) {
-            System.err.println("Hiba történt az adatbáziskapcsolat lezárásában! Üzenet: " + ex.getMessage());
-        }
-
-        return this.connection;
-    }
-
-    public Connection getCloseConnetcion() {
-
-        return this.closeConnection();
-
+        return cn.getConn();
     }
 
     /**
@@ -168,6 +132,7 @@ public class dataBaseSql implements ReposDataBase {
      */
     @Override
     public List<Client> findAllClients() throws SQLException {
+        // ResultSet all = this.getConnection().prepareStatement("SELECT * from customer").executeQuery();
         ResultSet all = this.getConnection().prepareStatement("SELECT * from customer").executeQuery();
         List<Client> ret = makeList(all);
         return ret;
@@ -296,6 +261,7 @@ public class dataBaseSql implements ReposDataBase {
         sz.setTelSzam(rs.getString("Phone Number"));
         sz.setSzulIdo(rs.getDate("Birth date").toLocalDate());
         return sz;
+
     }
 
     /**
@@ -707,5 +673,7 @@ public class dataBaseSql implements ReposDataBase {
         //    System.out.println(loanlist.get(1).getLtpId());
 
     }
+
+
 
 }

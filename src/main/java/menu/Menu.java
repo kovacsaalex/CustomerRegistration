@@ -1,6 +1,7 @@
 package menu;
 
 
+import database.DbConnectSql;
 import ltp.LtpAdd;
 import loan.LoanAdd;
 import client.ClientAdd;
@@ -190,7 +191,7 @@ public class Menu extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void jMenuItem2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem2ActionPerformed
-        new dataBaseSql().getCloseConnetcion();
+        new DbConnectSql().close();
         System.exit(0);
     }//GEN-LAST:event_jMenuItem2ActionPerformed
 
