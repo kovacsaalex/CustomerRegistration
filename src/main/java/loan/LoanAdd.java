@@ -3,17 +3,17 @@ package loan;
 
 import database.dataBaseSql;
 import fileChooser.FileChooser;
+import readExcel.DataExcel;
+import regex.RegexSample;
+import repository.ReposDataBase;
+import repository.ReposExcel;
+
+import javax.swing.*;
 import java.io.IOException;
 import java.sql.SQLException;
 import java.time.LocalDate;
 import java.time.format.DateTimeFormatter;
 import java.time.format.DateTimeParseException;
-import javax.swing.JOptionPane;
-import readExcel.DataExcel;
-import regex.RegexSample;
-import repository.ReposDataBase;
-
-import repository.ReposExcel;
 
 /**
  *
@@ -520,6 +520,7 @@ public class LoanAdd extends javax.swing.JFrame {
         }
         if (!hitelOsszeg.getText().isEmpty()) {
             LoanAmount = Integer.parseInt(hitelOsszeg.getText());
+
         }
         if (!hitelFutamido.getText().isEmpty()) {
             loanTerm = Integer.parseInt(hitelFutamido.getText());
@@ -796,6 +797,7 @@ public class LoanAdd extends javax.swing.JFrame {
     private void hitelOsszegKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_hitelOsszegKeyTyped
         // 
                  String str = hitelOsszeg.getText();
+
         char Ch = evt.getKeyChar();
         if (Ch >= 33 && Ch <= 126) {
             str += Ch;
@@ -976,15 +978,43 @@ public class LoanAdd extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_hitelKamatlabActionPerformed
 
-    private void lEditButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_lEditButtonActionPerformed
+    private void lEditButtonActionPerformed(java.awt.event.ActionEvent evt)  {//GEN-FIRST:event_lEditButtonActionPerformed
         // EDIT
                try{
                           
                     }catch (DateTimeParseException ex){
             JOptionPane.showMessageDialog(rootPane, "Dátum formátum nem megfelelő (ÉÉÉÉ-HH-NN) !" );
                     }           
-           
+           //
+        //
+        //
+        //
+        //Kódismétlés Kódismétlés Kódismétlés Kódismétlés Kódismétlés Kódismétlés Kódismétlés
+        //
+        //
+        //
+        //
+
         try {
+            if (!hitelOsszeg.getText().isEmpty()) {
+                LoanAmount = Integer.parseInt(hitelOsszeg.getText());
+
+            }
+            if (!hitelFutamido.getText().isEmpty()) {
+                loanTerm = Integer.parseInt(hitelFutamido.getText());
+            }
+            if (!hitelKamatlab.getText().isEmpty()) {
+                loanRate = Double.parseDouble(hitelKamatlab.getText());
+            }
+            if (!hitelIrSzam.getText().isEmpty()) {
+                pCode = Integer.parseInt(hitelIrSzam.getText());
+            }
+            if (!hitelFedezetMeret.getText().isEmpty()) {
+                loanSize = Integer.parseInt(hitelFedezetMeret.getText());
+            }
+            if (!hitelBecsErtek.getText().isEmpty()) {
+                loanValues = Integer.parseInt(hitelBecsErtek.getText());
+            }
       
                data.update(new Loan(Integer.parseInt(LoanID.getText()), hitelTipus.getText(), LoanAmount,hitelkezd,hitelVege,
                         loanTerm, loanRate,  hitelHrsz.getText(), hitelVaros.getText(), hitelCim.getText(),

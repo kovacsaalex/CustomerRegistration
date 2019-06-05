@@ -17,6 +17,7 @@ import java.util.List;
 public class dataBaseSql implements ReposDataBase {
 
     DbConnectSql cn = new DbConnectSql();
+    Props props = new Props();
     int id = 0;
 
     public dataBaseSql() {
@@ -45,11 +46,7 @@ public class dataBaseSql implements ReposDataBase {
      */
     @Override
     public void insertClient(Client adat) {
-
-        try (PreparedStatement insertNewClient = this.getConnection().prepareStatement("INSERT INTO customer (`Last Name`, `First Name`, `Maiden Name`, `Email`, `Birth Place`, `Mother Name`,"
-                + " `Personal Identification Number`, `Tax Number`, `Social Security Number`, `Postal Code`, `City`,"
-                + " `Address`, `Moving Time`, `ID Card Number`, `Address Card Number`, `Phone Number`,`Birth Date`) "
-                + "VALUES (?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)", PreparedStatement.RETURN_GENERATED_KEYS)) {
+        try (PreparedStatement insertNewClient = this.getConnection().prepareStatement( props.getInsertClient(), PreparedStatement.RETURN_GENERATED_KEYS)) {
 
             insertNewClient.setString(1, adat.getVezetekNev());
             insertNewClient.setString(2, adat.getKeresztNevek());
@@ -86,10 +83,7 @@ public class dataBaseSql implements ReposDataBase {
      */
     @Override
     public void insertClientToLoan(Client adat){
-        try (PreparedStatement insertNewClient = this.getConnection().prepareStatement("INSERT INTO customer (`Last Name`, `First Name`, `Maiden Name`, `Email`, `Birth Place`, `Mother Name`,"
-                + " `Personal Identification Number`, `Tax Number`, `Social Security Number`, `Postal Code`, `City`,"
-                + " `Address`, `Moving Time`, `ID Card Number`, `Address Card Number`, `Phone Number`,`Birth Date`) "
-                + "VALUES (?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)", PreparedStatement.RETURN_GENERATED_KEYS)) {
+        try (PreparedStatement insertNewClient = this.getConnection().prepareStatement(props.getInsertClientToLoan(), PreparedStatement.RETURN_GENERATED_KEYS)) {
 
             insertNewClient.setString(1, adat.getVezetekNev());
             insertNewClient.setString(2, adat.getKeresztNevek());
@@ -113,7 +107,7 @@ public class dataBaseSql implements ReposDataBase {
             if (generatedKeys.next()) {
                 System.out.println("hív");
                 id = generatedKeys.getInt(1);
-                PreparedStatement insertCToL = this.getConnection().prepareStatement("INSERT INTO `Customer_to_Loan` (`Id customer`, `Id loan`) VALUES (?,?)");
+                PreparedStatement insertCToL = this.getConnection().prepareStatement(props.getInsertCToL());
                 insertCToL.setInt(1, id);
                 insertCToL.setInt(2, adat.getId());
                 insertCToL.executeUpdate();
@@ -130,8 +124,7 @@ public class dataBaseSql implements ReposDataBase {
      */
     @Override
     public List<Client> findAllClients() throws SQLException {
-        // ResultSet all = this.getConnection().prepareStatement("SELECT * from customer").executeQuery();
-        ResultSet all = this.getConnection().prepareStatement("SELECT * from customer").executeQuery();
+        ResultSet all = this.getConnection().prepareStatement(props.getFindAllClients()).executeQuery();
         List<Client> ret = makeList(all);
         return ret;
     }
@@ -145,7 +138,7 @@ public class dataBaseSql implements ReposDataBase {
     @Override
     public Client findbyIdClients(int id) throws SQLException {
 
-        PreparedStatement fIdClient = this.getConnection().prepareStatement("SELECT * FROM customer WHERE id=?;");
+        PreparedStatement fIdClient = this.getConnection().prepareStatement(props.getFindbyIdClients());
         fIdClient.setInt(1, id);
         ResultSet findById = fIdClient.executeQuery();
         List<Client> ret = makeList(findById);
@@ -166,26 +159,8 @@ public class dataBaseSql implements ReposDataBase {
      */
     @Override
     public List<Client> searchFromClients(String ValToSearch) throws SQLException {
-        ResultSet searchClient = this.getConnection().
-                prepareStatement("SELECT * from customer "
-                        + "WHERE CONCAT( `customer`.`Id`,\n"
-                        + "    `customer`.`Last Name`,\n"
-                        + "    `customer`.`First Name`,\n"
-                        + "    `customer`.`Maiden Name`,\n"
-                        + "    `customer`.`Email`,\n"
-                        + "    `customer`.`Birth Date`,\n"
-                        + "    `customer`.`Birth Place`,\n"
-                        + "    `customer`.`Mother Name`,\n"
-                        + "    `customer`.`Personal Identification Number`,\n"
-                        + "    `customer`.`Tax Number`,\n"
-                        + "    `customer`.`Social Security Number`,\n"
-                        + "    `customer`.`Postal Code`,\n"
-                        + "    `customer`.`City`,\n"
-                        + "    `customer`.`Address`,\n"
-                        + "    `customer`.`Moving Time`,\n"
-                        + "    `customer`.`ID Card Number`,\n"
-                        + "    `customer`.`Address Card Number`,\n"
-                        + "    `customer`.`Phone Number`) LIKE '%" + ValToSearch + "%'").executeQuery();
+            ResultSet searchClient = this.getConnection().
+                prepareStatement(props.getSearchFromClients()+ ValToSearch +"%'").executeQuery();
         List<Client> ret = makeList(searchClient);
         return ret;
     }
@@ -195,14 +170,9 @@ public class dataBaseSql implements ReposDataBase {
  * @param client 
  */
     @Override
-    public void update(Client client) {
+    public void update(Client client) throws SQLException{
 
-        try {
-
-            PreparedStatement clientUpdate = this.getConnection().prepareStatement("UPDATE customer SET `Last Name`=?, `First Name`=?,"
-                    + "`Maiden Name`=?, `Email`=?, `Birth Place`=?, `Mother Name`=?, `Personal Identification Number`=?, "
-                    + "`Tax Number`=?, `Social Security Number`=?, `Postal Code`=?, `City`=?,`Address`=?, `Moving Time`=?, `ID Card Number`=?, "
-                    + "`Address Card Number`=?, `Phone Number`=?,`Birth Date`=? WHERE Id=?");
+            PreparedStatement clientUpdate = this.getConnection().prepareStatement(props.getClientUpdate());
 
             clientUpdate.setString(1, client.getVezetekNev());
             clientUpdate.setString(2, client.getKeresztNevek());
@@ -224,10 +194,6 @@ public class dataBaseSql implements ReposDataBase {
             clientUpdate.setInt(18, client.getId());
 
             clientUpdate.executeUpdate();
-
-        } catch (SQLException e) {
-            System.out.println("e:" + e.getMessage());
-        }
     }
 
     private List<Client> makeList(ResultSet rs) throws SQLException {
@@ -241,23 +207,23 @@ public class dataBaseSql implements ReposDataBase {
     private Client makeOne(ResultSet rs) throws SQLException {
         Client sz = new Client();
         sz.setId(rs.getInt("id"));
-        sz.setVezetekNev(rs.getString("Last Name"));
-        sz.setKeresztNevek(rs.getString("First Name"));
-        sz.setLeanyKoriNev(rs.getString("Maiden Name"));
+        sz.setVezetekNev(rs.getString("Last_Name"));
+        sz.setKeresztNevek(rs.getString("First_Name"));
+        sz.setLeanyKoriNev(rs.getString("Maiden_Name"));
         sz.setEmail(rs.getString("Email"));
-        sz.setSzulHely(rs.getString("Birth Place"));
-        sz.setAnyuNeve(rs.getString("Mother Name"));
-        sz.setSzemelyiSzam(rs.getString("Personal Identification Number"));
-        sz.setAdoAzonosito(rs.getString("Tax Number"));
-        sz.setTajSzam(rs.getString("Social Security Number"));
-        sz.setIranyitoSzam(rs.getInt("Postal Code"));
+        sz.setSzulHely(rs.getString("Birth_Place"));
+        sz.setAnyuNeve(rs.getString("Mother_Name"));
+        sz.setSzemelyiSzam(rs.getString("Personal_Identification_Number"));
+        sz.setAdoAzonosito(rs.getString("Tax_Number"));
+        sz.setTajSzam(rs.getString("Social_Security_Number"));
+        sz.setIranyitoSzam(rs.getInt("Postal_Code"));
         sz.setVaros(rs.getString("City"));
         sz.setLakCim(rs.getString("Address"));
-        sz.setLakhelyido(rs.getString("Moving Time"));
-        sz.setSzIgSzam(rs.getString("ID Card Number"));
-        sz.setLakCim(rs.getString("Address Card Number"));
-        sz.setTelSzam(rs.getString("Phone Number"));
-        sz.setSzulIdo(rs.getDate("Birth date").toLocalDate());
+        sz.setLakhelyido(rs.getString("Moving_Time"));
+        sz.setSzIgSzam(rs.getString("ID_Card_Number"));
+        sz.setLakCim(rs.getString("Address_Card_Number"));
+        sz.setTelSzam(rs.getString("Phone_Number"));
+        sz.setSzulIdo(rs.getDate("Birth_date").toLocalDate());
         return sz;
 
     }
@@ -269,7 +235,7 @@ public class dataBaseSql implements ReposDataBase {
      */
     @Override
     public void ClientDelete(int id) throws SQLException {
-        PreparedStatement deleteClientById = this.getConnection().prepareStatement("delete from customer where `Id` =?");
+        PreparedStatement deleteClientById = this.getConnection().prepareStatement(props.getClientDelete());
         deleteClientById.setInt(1, id);
         deleteClientById.executeUpdate();
     }
@@ -282,9 +248,7 @@ public class dataBaseSql implements ReposDataBase {
     @Override
     public void insertLoan(Loan adat) {
         try {
-            PreparedStatement insertNewLoan = this.getConnection().prepareStatement("INSERT INTO loan (`Type`, `Amount`,`Start`,`End`,`Term`,`Interest Rate`,`Hrsz`,`City`,"
-                    + "`Postal Code`,`Address`,`Size`,`Value`,`Condition`) "
-                    + "VALUES (?,?,?,?,?,?,?,?,?,?,?,?,?)", PreparedStatement.RETURN_GENERATED_KEYS);
+            PreparedStatement insertNewLoan = this.getConnection().prepareStatement(props.getInsertLoan(), PreparedStatement.RETURN_GENERATED_KEYS);
 
             insertNewLoan.setString(1, adat.getHitelTipus());
             insertNewLoan.setInt(2, adat.getOsszeg());
@@ -306,7 +270,7 @@ public class dataBaseSql implements ReposDataBase {
             if (generatedKeys.next()) {
                 id = generatedKeys.getInt(1);
 
-                PreparedStatement insertCToL = this.getConnection().prepareStatement("INSERT INTO `Customer_to_Loan` (`Id customer`, `Id loan`) VALUES (?,?)");
+                PreparedStatement insertCToL = this.getConnection().prepareStatement(props.getInsertCToL());
                 insertCToL.setInt(1, adat.getUgyfelId());
 
                 insertCToL.setInt(2, id);
@@ -317,7 +281,7 @@ public class dataBaseSql implements ReposDataBase {
 
             insertNewLoan.close();
         } catch (SQLException e) {
-            System.out.println("" + e.getMessage() + e.getSQLState());
+            System.out.println("Hiba az hitel felvitele közben / Error insert loan" + e.getMessage() + e.getSQLState());
         }
     }
 
@@ -328,9 +292,11 @@ public class dataBaseSql implements ReposDataBase {
     @Override
     public void update(Loan loan) {
         try {
-            PreparedStatement loanupdate = this.getConnection().prepareStatement("UPDATE loan SET `Type`=?, `Amount`=?, `Start`=?, `End`=?,`Term`=?,  `Interest Rate`=?,`Hrsz`=?, `City`=?, `Postal Code`=?, `Address`=?,`Size`=?,`Value`=?,`Condition`=? WHERE `Id Loan`=?");
+
+            PreparedStatement loanupdate = this.getConnection().prepareStatement(props.getLoanUpdate());
             loanupdate.setString(1, loan.getHitelTipus());
             loanupdate.setInt(2, loan.getOsszeg());
+            System.out.println(loan.getOsszeg());
             loanupdate.setDate(3, Date.valueOf(loan.getKezdet()));
             loanupdate.setDate(4, Date.valueOf(loan.getLejarat()));
             loanupdate.setInt(5, loan.getFutamido());
@@ -357,7 +323,7 @@ public class dataBaseSql implements ReposDataBase {
      */
     @Override
     public List<Loan> findAllLoans() throws SQLException {
-        ResultSet all = this.getConnection().prepareStatement("SELECT * from loan").executeQuery();
+        ResultSet all = this.getConnection().prepareStatement(props.getFindAllLoans()).executeQuery();
         List<Loan> retltp = makeLoanList(all);
         return retltp;
     }
@@ -370,7 +336,7 @@ public class dataBaseSql implements ReposDataBase {
      */
     @Override
     public Loan findByIdLoan(int id) throws SQLException {
-        PreparedStatement fIdLoan = this.getConnection().prepareStatement("SELECT * from loan WHERE `Id Loan`=?;");
+        PreparedStatement fIdLoan = this.getConnection().prepareStatement(props.getFindByIdLoan());
         fIdLoan.setInt(1, id);
         ResultSet findbyIdLoan = fIdLoan.executeQuery();
         List<Loan> retloan = makeLoanList(findbyIdLoan);
@@ -391,7 +357,7 @@ public class dataBaseSql implements ReposDataBase {
     @Override
     public List<Loan> searchFromLoan(String ValToSearch) throws SQLException {
 
-        ResultSet searchloan = this.getConnection().prepareStatement("SELECT * from loan WHERE CONCAT(`Id Loan`,`Type`,`Amount`,`Start`,`End`,`Term`,`Interest Rate`,`Hrsz`,`City`,`Postal Code`,`Address`,`Size`,`Value`,`Condition`) LIKE '%" + ValToSearch + "%'").executeQuery();
+        ResultSet searchloan = this.getConnection().prepareStatement(props.getSearchFromLoan() + ValToSearch + "%'").executeQuery();
 
         List<Loan> retloan = makeLoanList(searchloan);
         return retloan;
@@ -408,16 +374,16 @@ public class dataBaseSql implements ReposDataBase {
 
     private Loan makeLoanOne(ResultSet rs) throws SQLException {
         Loan sz = new Loan();
-        sz.setUgyfelId(rs.getInt("Id Loan"));
+        sz.setUgyfelId(rs.getInt("Id_loan"));
         sz.setHitelTipus(rs.getString("Type"));
         sz.setOsszeg(rs.getInt("Amount"));
         sz.setKezdet(LocalDate.parse(rs.getString("Start")));
         sz.setLejarat(LocalDate.parse(rs.getString("End")));
         sz.setFutamido(rs.getInt("Term"));
-        sz.setKamatlab(rs.getDouble("Interest Rate"));
+        sz.setKamatlab(rs.getDouble("Interest_Rate"));
         sz.setHrsz(rs.getString("Hrsz"));
         sz.setfVaros(rs.getString("City"));
-        sz.setfIrSzam(rs.getInt("Postal Code"));
+        sz.setfIrSzam(rs.getInt("Postal_Code"));
         sz.setfCim(rs.getString("Address"));
         sz.setMeret(rs.getInt("Size"));
         sz.setBecsErtek(rs.getInt("Value"));
@@ -430,9 +396,10 @@ public class dataBaseSql implements ReposDataBase {
      * @param id
      * @throws SQLException 
      */
+
     @Override
     public void LoanDelete(int id) throws SQLException {
-        PreparedStatement deleteLoanById = this.getConnection().prepareStatement("delete from loan where `Id Loan` =?");
+        PreparedStatement deleteLoanById = this.getConnection().prepareStatement(props.getLoanDelete());
         deleteLoanById.setInt(1, id);
         deleteLoanById.executeUpdate();
     }
@@ -445,8 +412,7 @@ public class dataBaseSql implements ReposDataBase {
     @Override
     public void insertLtp(Ltp adat) {
         try {
-            try (PreparedStatement insertNewLtp = this.getConnection().prepareStatement("INSERT INTO savings (`Id customer`,`Amount`,`Start`,`Term`,`End`,`Piece`) "
-                    + "VALUES (?,?,?,?,?,?)", PreparedStatement.RETURN_GENERATED_KEYS)) {
+            try (PreparedStatement insertNewLtp = this.getConnection().prepareStatement(props.getInsertLtp(), PreparedStatement.RETURN_GENERATED_KEYS)) {
                 insertNewLtp.setInt(1, adat.getUgyfelId());
                 insertNewLtp.setInt(2, adat.getSzerzOsszeg());
                 insertNewLtp.setDate(3, Date.valueOf(adat.getLtpStart()));
@@ -473,7 +439,7 @@ public class dataBaseSql implements ReposDataBase {
     @Override
     public void update(Ltp ltp) {
         try {
-            PreparedStatement ltpUpdate = this.getConnection().prepareStatement("UPDATE savings SET `Amount`=?, `Start`=?, `Term`=?, `End`=?, `Piece`=? WHERE `Id Savings`=?");
+            PreparedStatement ltpUpdate = this.getConnection().prepareStatement(props.getLtpUpdate());
             ltpUpdate.setInt(1, ltp.getSzerzOsszeg());
             ltpUpdate.setDate(2, Date.valueOf(ltp.getLtpStart()));
             ltpUpdate.setInt(3, ltp.getLtpFutamido());
@@ -494,7 +460,7 @@ public class dataBaseSql implements ReposDataBase {
     @Override
     public List<Ltp> findAllLtp() throws SQLException {
 
-        ResultSet all = this.getConnection().prepareStatement("SELECT * from savings").executeQuery();
+        ResultSet all = this.getConnection().prepareStatement(props.getFindAllLtp()).executeQuery();
         List<Ltp> retltp = makeLtpList(all);
         return retltp;
     }
@@ -507,7 +473,7 @@ public class dataBaseSql implements ReposDataBase {
  */
     @Override
     public Ltp findbyIdLtp(int id) throws SQLException {
-        PreparedStatement fIdLtp = this.getConnection().prepareStatement("SELECT * from savings WHERE `Id Savings`=?;");
+        PreparedStatement fIdLtp = this.getConnection().prepareStatement("SELECT * from savings WHERE `Id_savings`=?;");
         fIdLtp.setInt(1, id);
         ResultSet findbyIdLtp = fIdLtp.executeQuery();
         List<Ltp> retltp = makeLtpList(findbyIdLtp);
@@ -527,7 +493,7 @@ public class dataBaseSql implements ReposDataBase {
      */
     @Override
     public List<Ltp> searchFromLtp(String ValToSearch) throws SQLException {
-        ResultSet searchltp = this.getConnection().prepareStatement("SELECT `Id Savings`,Amount,Start,Term,End,Piece,`Id customer`,`Last Name`,`First Name` from savings, customer WHERE CONCAT(`Id Savings`,`Amount`, `Start`, `Term`, `End`, `Piece`,`Id Customer`, `Last Name`,`First Name`) LIKE '%" + ValToSearch + "%'").executeQuery();
+        ResultSet searchltp = this.getConnection().prepareStatement("SELECT `Id_savings`,Amount,Start,Term,End,Piece,`Id_customer`,`Last_Name`,`First_Name` from savings, customer WHERE CONCAT(`Id_savings`,`Amount`, `Start`, `Term`, `End`, `Piece`,`Id_customer`, `Last_Name`,`First_Name`) LIKE '%" + ValToSearch + "%'").executeQuery();
         List<Ltp> retltp = makeLtpList(searchltp);
         return retltp;
 
@@ -544,13 +510,13 @@ public class dataBaseSql implements ReposDataBase {
 
     private Ltp makeLtp(ResultSet rs) throws SQLException {
         Ltp data = new Ltp();
-        data.setUgyfelId2(rs.getString("Id customer"));
+        data.setUgyfelId2(rs.getString("Id_customer"));
         data.setSzerzOsszeg(rs.getInt("Amount"));
         data.setLtpStart2(rs.getString("Start"));
         data.setLtpFutamido(rs.getInt("Term"));
         data.setLtpEnd2(rs.getString("End"));
         data.setdBSzam2(rs.getString("Piece"));
-        data.setUgyfelId(rs.getInt("Id Savings"));
+        data.setUgyfelId(rs.getInt("Id_savings"));
 
         return data;
     }
@@ -562,7 +528,7 @@ public class dataBaseSql implements ReposDataBase {
      */
     @Override
     public void LtpDelete(int id) throws SQLException {
-        PreparedStatement deleteLtpById = this.getConnection().prepareStatement("delete from savings where `Id Savings` =?");
+        PreparedStatement deleteLtpById = this.getConnection().prepareStatement("delete from savings where `Id_savings` =?");
         deleteLtpById.setInt(1, id);
         deleteLtpById.executeUpdate();
     }
@@ -576,10 +542,10 @@ public class dataBaseSql implements ReposDataBase {
     @Override
     public List<AllKindList> allKindList() throws SQLException {
 
-        ResultSet searchAll = this.getConnection().prepareStatement("SELECT `customer`.`Id`,`loan`.`Id loan`,`savings`.`Id savings`,"
-                + "`Last Name`, `First Name`,`loan`.`Amount`,`loan`.`Start`,`loan`.`End`, `savings`.`Amount`,`savings`.`Start`,"
-                + "`savings`.`End`from loan,customer INNER JOIN Customer_to_Loan ON `Id customer`=`Id` "
-                + "INNER JOIN savings ON `savings`.`Id customer`=`Id`;").executeQuery();
+        ResultSet searchAll = this.getConnection().prepareStatement("SELECT `customer`.`Id`,`loan`.`Id_loan`,`savings`.`Id_savings`,"
+                + "`Last_Name`, `First_Name`,`loan`.`Amount`,`loan`.`Start`,`loan`.`End`, `savings`.`Amount`,`savings`.`Start`,"
+                + "`savings`.`End`from loan,customer INNER JOIN Customer_to_Loan ON `Id_customer`=`Id` "
+                + "INNER JOIN savings ON `savings`.`Id_customer`=`Id`;").executeQuery();
 
         List<AllKindList> allKindList = makeAllKindListsList(searchAll);
         return allKindList;
@@ -601,10 +567,10 @@ public class dataBaseSql implements ReposDataBase {
      */
     @Override
     public List<AllKindList> searhFromAllKindLists(String ValToSearch) throws SQLException {
-        ResultSet searchAllKind = this.getConnection().prepareStatement("SELECT `customer`.`Id`,`loan`.`Id loan`,`savings`.`Id savings`,"
-                + "`Last Name`, `First Name`,`loan`.`Amount`,`loan`.`Start`,`loan`.`End`, `savings`.`Amount`,`savings`.`Start`,"
-                + "`savings`.`End`from loan,customer,savings,Customer_to_Loan WHERE CONCAT(`customer`.`Id`,`loan`.`Id loan`,`savings`.`Id savings`,"
-                + "`Last Name`, `First Name`,`loan`.`Amount`,`loan`.`Start`,`loan`.`End`, `savings`.`Amount`,`savings`.`Start`,"
+        ResultSet searchAllKind = this.getConnection().prepareStatement("SELECT `customer`.`Id`,`loan`.`Id_loan`,`savings`.`Id_savings`,"
+                + "`Last_Name`, `First_Name`,`loan`.`Amount`,`loan`.`Start`,`loan`.`End`, `savings`.`Amount`,`savings`.`Start`,"
+                + "`savings`.`End`from loan,customer,savings,Customer_to_Loan WHERE CONCAT(`customer`.`Id`,`loan`.`Id_loan`,`savings`.`Id_savings`,"
+                + "`Last_Name`, `First_Name`,`loan`.`Amount`,`loan`.`Start`,`loan`.`End`, `savings`.`Amount`,`savings`.`Start`,"
                 + "`savings`.`End`) LIKE '%" + ValToSearch + "%'").executeQuery();
         List<AllKindList> allKindList = makeAllKindListsList(searchAllKind);
         return allKindList;
@@ -613,10 +579,10 @@ public class dataBaseSql implements ReposDataBase {
     private AllKindList makefulllist(ResultSet rs) throws SQLException {
         AllKindList data = new AllKindList();
         data.setUgyfelId(rs.getString("Id"));
-        data.setLoanId(rs.getString("Id loan"));
-        data.setLtpId(rs.getString("Id savings"));
-        data.setVezetekNev(rs.getString("Last Name"));
-        data.setKeresztNevek(rs.getString("First Name"));
+        data.setLoanId(rs.getString("Id_loan"));
+        data.setLtpId(rs.getString("Id_savings"));
+        data.setVezetekNev(rs.getString("Last_Name"));
+        data.setKeresztNevek(rs.getString("First_Name"));
         data.setHitelOsszeg(rs.getString("loan.Amount"));
         data.setHiteStart(rs.getString("loan.Start"));
         data.setHiteEnd(rs.getString("loan.End"));
@@ -633,7 +599,7 @@ public class dataBaseSql implements ReposDataBase {
      */
      @Override
     public List<AllKindList> ClientLoanList() throws SQLException {
-          ResultSet clientLoan = this.getConnection().prepareStatement("SELECT `customer`.`Id`,`loan`.`Id loan`,`Last Name`, `First Name`,`loan`.`Amount`,`loan`.`Start`,`loan`.`End` from loan,customer INNER JOIN Customer_to_Loan ON `Id customer`=`Id`;").executeQuery();
+          ResultSet clientLoan = this.getConnection().prepareStatement("SELECT `customer`.`Id`,`loan`.`Id_loan`,`Last_Name`, `First_Name`,`loan`.`Amount`,`loan`.`Start`,`loan`.`End` from loan,customer INNER JOIN Customer_to_Loan ON `Id_customer`=`Id`;").executeQuery();
        List<AllKindList> allKindList = makeClientLoanLists(clientLoan);
         return allKindList;
     }
@@ -649,10 +615,10 @@ public class dataBaseSql implements ReposDataBase {
        private AllKindList makeClienLoan (ResultSet rs) throws SQLException {
         AllKindList data = new AllKindList();
         data.setUgyfelId(rs.getString("Id"));
-        data.setLoanId(rs.getString("Id loan"));
+        data.setLoanId(rs.getString("Id_loan"));
         
-        data.setVezetekNev(rs.getString("Last Name"));
-        data.setKeresztNevek(rs.getString("First Name"));
+        data.setVezetekNev(rs.getString("Last_Name"));
+        data.setKeresztNevek(rs.getString("First_Name"));
         data.setHitelOsszeg(rs.getString("loan.Amount"));
         data.setHiteStart(rs.getString("loan.Start"));
         data.setHiteEnd(rs.getString("loan.End"));

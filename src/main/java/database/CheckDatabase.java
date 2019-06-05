@@ -15,7 +15,7 @@ public class CheckDatabase {
     public CheckDatabase() {
     }
 
-    private void ChkDatabase() {
+    private void ChkDatabase()  {
 
         if (connection != null) {
             try {

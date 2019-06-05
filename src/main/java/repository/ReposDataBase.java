@@ -1,11 +1,12 @@
 package repository;
 
 import client.Client;
-import java.sql.SQLException;
-import java.util.List;
 import lists.AllKindList;
 import loan.Loan;
 import ltp.Ltp;
+
+import java.sql.SQLException;
+import java.util.List;
 
 /**
  *
@@ -23,9 +24,9 @@ public interface ReposDataBase {
     void insertLtp(Ltp adat) throws SQLException;
 
     // modosítások
-    void update(Client client);
+    void update(Client client) throws SQLException;
 
-    void update(Loan loan);
+    void update(Loan loan) ;
 
     void update(Ltp ltp);
 

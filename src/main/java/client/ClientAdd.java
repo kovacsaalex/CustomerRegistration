@@ -2,18 +2,17 @@ package client;
 
 import database.dataBaseSql;
 import fileChooser.FileChooser;
+import readExcel.DataExcel;
+import regex.RegexSample;
+import repository.ReposDataBase;
+import repository.ReposExcel;
+
+import javax.swing.*;
 import java.io.IOException;
 import java.sql.SQLException;
 import java.time.LocalDate;
 import java.time.format.DateTimeFormatter;
 import java.time.format.DateTimeParseException;
-import javax.swing.ImageIcon;
-import javax.swing.JOptionPane;
-import readExcel.DataExcel;
-
-import regex.RegexSample;
-import repository.ReposDataBase;
-import repository.ReposExcel;
 
 /**
  *
@@ -973,7 +972,7 @@ public class ClientAdd extends javax.swing.JFrame {
                             "Hiba!", JOptionPane.INFORMATION_MESSAGE);
                 }
 
-            } catch (NullPointerException | NumberFormatException e) {
+            } catch (NullPointerException | NumberFormatException | SQLException e) {
                 System.out.println("ez:" + e.getMessage());
             }
         }
