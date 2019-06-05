@@ -4,15 +4,7 @@
     <bookmark url="file://$PROJECT_DIR$/pom.xml" line="55" mnemonic="6" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="c4501a20-4305-497a-b328-9f4a0509fed0" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/BigPicture.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/BigPicture.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/database/CheckDatabase.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/database/CheckDatabase.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/database/DbConnectSql.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/database/DbConnectSql.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/database/Props.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/database/Props.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/database/dataBaseSql.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/database/dataBaseSql.java" afterDir="false" />
-    </list>
+    <list default="true" id="c4501a20-4305-497a-b328-9f4a0509fed0" name="Default Changelist" comment="" />
     <ignored path="$PROJECT_DIR$/classes/" />
     <ignored path="$PROJECT_DIR$/target/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -76,10 +68,11 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/database/Props.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="276">
-              <caret line="24" column="13" lean-forward="true" selection-start-line="24" selection-start-column="13" selection-end-line="24" selection-end-column="13" />
+            <state relative-caret-position="234">
+              <caret line="22" lean-forward="true" selection-start-line="22" selection-end-line="22" />
               <folding>
                 <element signature="imports" expanded="true" />
+                <element signature="e#751#752#0" expanded="true" />
                 <element signature="e#792#793#0" expanded="true" />
                 <element signature="method#getProps#0;class#Props#0" expanded="true" />
                 <element signature="e#1578#1579#0" expanded="true" />
@@ -312,11 +305,19 @@
       <option name="project" value="LOCAL" />
       <updated>1559660150397</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="Update CheckDatabase Class - Import from config file">
+      <created>1559719639132</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1559719639132</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="ToolWindowManager">
     <frame x="1443" y="23" width="1871" height="996" extended-state="0" />
+    <editor active="true" />
     <layout>
       <window_info content_ui="combo" id="Project" order="0" sideWeight="0.49887386" visible="true" weight="0.16621104" />
       <window_info id="Structure" order="1" sideWeight="0.5011261" side_tool="true" weight="0.16834451" />
@@ -549,10 +550,11 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/database/Props.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="276">
-          <caret line="24" column="13" lean-forward="true" selection-start-line="24" selection-start-column="13" selection-end-line="24" selection-end-column="13" />
+        <state relative-caret-position="234">
+          <caret line="22" lean-forward="true" selection-start-line="22" selection-end-line="22" />
           <folding>
             <element signature="imports" expanded="true" />
+            <element signature="e#751#752#0" expanded="true" />
             <element signature="e#792#793#0" expanded="true" />
             <element signature="method#getProps#0;class#Props#0" expanded="true" />
             <element signature="e#1578#1579#0" expanded="true" />
