@@ -6,7 +6,10 @@ You can registrate clients, loans and savings.
 The data is stored in MySQL database.
 
 Functions:
-- [x] Graphical interface is Swing,Create customer data, Create loan data,  
+
+- [x] Graphical interface is Swing,
+- [x] Create customer data, 
+- [x] Create loan data,  
 - [x] Create savings data (LTP in Hungary
 - [x] Database MySql (local)
 - [x] Import data from Excel (specialized), customer,load,savings data
@@ -22,5 +25,4 @@ Plans:
 - [ ] Database connection properties from config file (url,user,passw)
 - [ ] Database connect to PostgreSql (now connect MySql), update querys. 
 - [ ] Database make in the cloud. (Heroku)
-
 
