@@ -38,7 +38,7 @@ public class dataBaseSql implements ReposDataBase {
         return id;
     }
 
-    // Client ******************
+    // Client ******************//
     
     /**
      * Insert new client to the MySQL database with personal data
@@ -473,7 +473,7 @@ public class dataBaseSql implements ReposDataBase {
  */
     @Override
     public Ltp findbyIdLtp(int id) throws SQLException {
-        PreparedStatement fIdLtp = this.getConnection().prepareStatement("SELECT * from savings WHERE `Id_savings`=?;");
+        PreparedStatement fIdLtp = this.getConnection().prepareStatement(props.getFindbyIdLtp());
         fIdLtp.setInt(1, id);
         ResultSet findbyIdLtp = fIdLtp.executeQuery();
         List<Ltp> retltp = makeLtpList(findbyIdLtp);
@@ -493,7 +493,7 @@ public class dataBaseSql implements ReposDataBase {
      */
     @Override
     public List<Ltp> searchFromLtp(String ValToSearch) throws SQLException {
-        ResultSet searchltp = this.getConnection().prepareStatement("SELECT `Id_savings`,Amount,Start,Term,End,Piece,`Id_customer`,`Last_Name`,`First_Name` from savings, customer WHERE CONCAT(`Id_savings`,`Amount`, `Start`, `Term`, `End`, `Piece`,`Id_customer`, `Last_Name`,`First_Name`) LIKE '%" + ValToSearch + "%'").executeQuery();
+        ResultSet searchltp = this.getConnection().prepareStatement(props.getSearchFromLtp() + ValToSearch + "%'").executeQuery();
         List<Ltp> retltp = makeLtpList(searchltp);
         return retltp;
 
@@ -528,7 +528,7 @@ public class dataBaseSql implements ReposDataBase {
      */
     @Override
     public void LtpDelete(int id) throws SQLException {
-        PreparedStatement deleteLtpById = this.getConnection().prepareStatement("delete from savings where `Id_savings` =?");
+        PreparedStatement deleteLtpById = this.getConnection().prepareStatement(props.getLtpDelete());
         deleteLtpById.setInt(1, id);
         deleteLtpById.executeUpdate();
     }
@@ -542,10 +542,11 @@ public class dataBaseSql implements ReposDataBase {
     @Override
     public List<AllKindList> allKindList() throws SQLException {
 
-        ResultSet searchAll = this.getConnection().prepareStatement("SELECT `customer`.`Id`,`loan`.`Id_loan`,`savings`.`Id_savings`,"
+      /*  ResultSet searchAll = this.getConnection().prepareStatement("SELECT `customer`.`Id`,`loan`.`Id_loan`,`savings`.`Id_savings`,"
                 + "`Last_Name`, `First_Name`,`loan`.`Amount`,`loan`.`Start`,`loan`.`End`, `savings`.`Amount`,`savings`.`Start`,"
                 + "`savings`.`End`from loan,customer INNER JOIN Customer_to_Loan ON `Id_customer`=`Id` "
-                + "INNER JOIN savings ON `savings`.`Id_customer`=`Id`;").executeQuery();
+                + "INNER JOIN savings ON `savings`.`Id_customer`=`Id`;").executeQuery();*/
+        ResultSet searchAll = this.getConnection().prepareStatement(props.getAllKindList()).executeQuery();
 
         List<AllKindList> allKindList = makeAllKindListsList(searchAll);
         return allKindList;
@@ -567,11 +568,12 @@ public class dataBaseSql implements ReposDataBase {
      */
     @Override
     public List<AllKindList> searhFromAllKindLists(String ValToSearch) throws SQLException {
-        ResultSet searchAllKind = this.getConnection().prepareStatement("SELECT `customer`.`Id`,`loan`.`Id_loan`,`savings`.`Id_savings`,"
+      /*  ResultSet searchAllKind = this.getConnection().prepareStatement("SELECT `customer`.`Id`,`loan`.`Id_loan`,`savings`.`Id_savings`,"
                 + "`Last_Name`, `First_Name`,`loan`.`Amount`,`loan`.`Start`,`loan`.`End`, `savings`.`Amount`,`savings`.`Start`,"
                 + "`savings`.`End`from loan,customer,savings,Customer_to_Loan WHERE CONCAT(`customer`.`Id`,`loan`.`Id_loan`,`savings`.`Id_savings`,"
                 + "`Last_Name`, `First_Name`,`loan`.`Amount`,`loan`.`Start`,`loan`.`End`, `savings`.`Amount`,`savings`.`Start`,"
-                + "`savings`.`End`) LIKE '%" + ValToSearch + "%'").executeQuery();
+                + "`savings`.`End`) LIKE '%" + ValToSearch + "%'").executeQuery();*/
+        ResultSet searchAllKind = this.getConnection().prepareStatement(props.getSearhFromAllKindLists() + ValToSearch + "%'").executeQuery();
         List<AllKindList> allKindList = makeAllKindListsList(searchAllKind);
         return allKindList;
     }
@@ -599,8 +601,9 @@ public class dataBaseSql implements ReposDataBase {
      */
      @Override
     public List<AllKindList> ClientLoanList() throws SQLException {
-          ResultSet clientLoan = this.getConnection().prepareStatement("SELECT `customer`.`Id`,`loan`.`Id_loan`,`Last_Name`, `First_Name`,`loan`.`Amount`,`loan`.`Start`,`loan`.`End` from loan,customer INNER JOIN Customer_to_Loan ON `Id_customer`=`Id`;").executeQuery();
-       List<AllKindList> allKindList = makeClientLoanLists(clientLoan);
+       //   ResultSet clientLoan = this.getConnection().prepareStatement("SELECT `customer`.`Id`,`loan`.`Id_loan`,`Last_Name`, `First_Name`,`loan`.`Amount`,`loan`.`Start`,`loan`.`End` from loan,customer INNER JOIN Customer_to_Loan ON `Id_customer`=`Id`;").executeQuery();
+         ResultSet clientLoan = this.getConnection().prepareStatement(props.getClientLoanList()).executeQuery();
+         List<AllKindList> allKindList = makeClientLoanLists(clientLoan);
         return allKindList;
     }
     

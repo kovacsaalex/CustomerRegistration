@@ -47,7 +47,10 @@ class Props {
     private String findbyIdLtp = "";
     private String searchFromLtp = "";
     private String LtpDelete = "";
-
+    // SQL ALL search
+    private String allKindList ="";
+    private String searhFromAllKindLists ="";
+    private String clientLoanList ="";
 
 
     Props() {
@@ -94,6 +97,10 @@ class Props {
             findbyIdLtp = props.getProperty("findbyIdLtp");
             searchFromLtp = props.getProperty("searchFromLtp");
             LtpDelete = props.getProperty("LtpDelete");
+            // AllList
+            allKindList = props.getProperty("allKindList");
+            searhFromAllKindLists = props.getProperty("searhFromAllKindLists");
+            clientLoanList = props.getProperty("clientLoanList");
 
 
         } catch (IOException e) {
@@ -208,5 +215,17 @@ class Props {
 
     public String getLtpDelete() {
         return LtpDelete;
+    }
+
+    public String getAllKindList() {
+        return allKindList;
+    }
+
+    public String getSearhFromAllKindLists() {
+        return searhFromAllKindLists;
+    }
+
+    public String getClientLoanList() {
+        return clientLoanList;
     }
 }
