@@ -6,7 +6,7 @@ You can registrate clients, loans and savings.
 The data is stored in MySQL database.
 
 Functions:
-Graphical interface is Swing 
+Graphical interface is Swing, 
 Create customer data
 Create loan data 
 Create savings data (LTP in Hungary
