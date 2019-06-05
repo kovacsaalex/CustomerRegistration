@@ -2,22 +2,29 @@ package database;
 
 import java.io.File;
 import java.io.FileInputStream;
-import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.util.Properties;
 
-public class Props {
+class Props {
 
-    Properties props = new Properties();
+    private Properties props = new Properties();
     private String configSql = "/Users/alex/Documents/Dev_Projects/CustomerRegistration/configSql.ini";
     private String configPostgreSql = "/Users/alex/Documents/Dev_Projects/CustomerRegistration/configPostgreSql.ini";
-    private  String username = "";
-    private  String password = "";
-    private  String url = "jdbc:mysql://localhost:3306/database?useLegacyDatetimeCode=false&serverTimezone=Europe/Budapest";
+    private String username = "";
+    private String password = "";
+    private String url = "jdbc:mysql://localhost:3306/database?useLegacyDatetimeCode=false&serverTimezone=Europe/Budapest";
 
-    public Props() {
+    //SQL Query for creating database
+    private  String createDbSql = "";
+
+    //SQL Query for creating table
+    private  String createTableCustomerSql = "";
+
+
+
+    Props() {
         getProps();
-    }
+                   }
 
     private Properties getProps(){
         File file;
@@ -27,24 +34,32 @@ public class Props {
             username = props.getProperty("usr");
             password = props.getProperty("passw");
             url = props.getProperty("url");
+            createDbSql = props.getProperty("createDbSql")+" "+props.getProperty("dbName");
+            createTableCustomerSql = props.getProperty("createTableSql")+" "+props.getProperty("dbName")+props.getProperty("tableName")+props.getProperty("createTableCustomer2");
 
-        } catch (FileNotFoundException e) {
-            e.printStackTrace();
         } catch (IOException e) {
             e.printStackTrace();
         }
         return props;
     }
 
-    public String getUsername() {
+    String getUsername() {
         return username;
     }
 
-    public String getPassword() {
+    String getPassword() {
         return password;
     }
 
-    public String getUrl() {
+    String getUrl() {
         return url;
+    }
+
+    String getCreateTableCustomer() {
+        return createTableCustomerSql;
+    }
+
+    String getCreateDbSql() {
+        return createDbSql;
     }
 }

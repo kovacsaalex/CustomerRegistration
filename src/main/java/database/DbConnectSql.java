@@ -1,18 +1,12 @@
 package database;
 
-import java.io.File;
-import java.io.FileInputStream;
-import java.io.FileNotFoundException;
-import java.io.IOException;
-import java.sql.*;
-import java.util.ArrayList;
-import java.util.List;
-import java.util.Properties;
-import database.Props;
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.SQLException;
 
 public class DbConnectSql implements AutoCloseable {
     private Connection conn = null;
-    Props props = new Props();
+    private Props props = new Props();
 
 
 
@@ -30,7 +24,7 @@ private Connection DbConnect(){
     return conn;
 }
 
-    public Connection getConn() {
+    public Connection getConnection() {
         return DbConnect();
     }
 

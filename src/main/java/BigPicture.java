@@ -1,8 +1,6 @@
-
-import menu.Menu;
-import database.dataBaseSql;
 import database.CheckDatabase;
 import database.DbConnectSql;
+import menu.Menu;
 
 
 /**
@@ -14,17 +12,12 @@ public class BigPicture {
     public static void main(String[] args) {
 
         new Menu().setVisible(true);
-        dataBaseSql dbSql = new dataBaseSql();
-        //dbSql.getConnection();
-        DbConnectSql conn = new DbConnectSql();
-        conn.getConn();
-        CheckDatabase ckdb = new CheckDatabase();
+        // Get connenction
+        new DbConnectSql().getConnection();
+        // Check database and table exists, if not create
+        new CheckDatabase().getCheckDatabase();
 
 
-
-
-        //   new databasePostgresql();
-        //new databasePostgresql();
 
 
     }

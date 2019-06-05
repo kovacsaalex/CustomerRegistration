@@ -1,17 +1,15 @@
 package database;
 
-
-
-import repository.*;
 import client.Client;
+import lists.AllKindList;
 import loan.Loan;
 import ltp.Ltp;
+import repository.ReposDataBase;
 
 import java.sql.*;
 import java.time.LocalDate;
 import java.util.ArrayList;
 import java.util.List;
-import lists.AllKindList;
 
 /**
  * This class make SQL Query with MySql database
@@ -26,7 +24,7 @@ public class dataBaseSql implements ReposDataBase {
 
 
     public Connection getConnection() {
-        return cn.getConn();
+        return cn.getConnection();
     }
 
     /**
@@ -87,7 +85,7 @@ public class dataBaseSql implements ReposDataBase {
      * @throws SQLException 
      */
     @Override
-    public void insertClientToLoan(Client adat) throws SQLException {
+    public void insertClientToLoan(Client adat){
         try (PreparedStatement insertNewClient = this.getConnection().prepareStatement("INSERT INTO customer (`Last Name`, `First Name`, `Maiden Name`, `Email`, `Birth Place`, `Mother Name`,"
                 + " `Personal Identification Number`, `Tax Number`, `Social Security Number`, `Postal Code`, `City`,"
                 + " `Address`, `Moving Time`, `ID Card Number`, `Address Card Number`, `Phone Number`,`Birth Date`) "
@@ -121,14 +119,14 @@ public class dataBaseSql implements ReposDataBase {
                 insertCToL.executeUpdate();
             }
         } catch (SQLException ex) {
-
+            System.out.println("Hiba az ügyfél felvitele közben / Error insert client"+ex.getMessage());
         }
     }
 
     /**
      * List all clients from the database
-     * @return
-     * @throws SQLException 
+     *
+     *
      */
     @Override
     public List<Client> findAllClients() throws SQLException {
@@ -140,9 +138,9 @@ public class dataBaseSql implements ReposDataBase {
 
     /**
      * Find client in the database by ID
-     * @param id
-     * @return
-     * @throws SQLException 
+     *
+     *
+     *
      */
     @Override
     public Client findbyIdClients(int id) throws SQLException {
