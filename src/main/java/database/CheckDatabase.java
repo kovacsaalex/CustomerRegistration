@@ -30,16 +30,20 @@ public class CheckDatabase {
         try {
             createStatement.executeUpdate(new Props().getCreateDbSql());
         } catch (SQLException e) {
-            System.out.println("Hiba az adatbázis létrehozása közben! / Error while creating database!");
+            System.out.println("Hiba az adatbázis létrehozása közben! / Error while creating database!"+e.getMessage());
             e.printStackTrace();
         }
 
         try {
             createStatement.executeUpdate(new Props().getCreateTableCustomer());
+            createStatement.executeUpdate(new Props().getCreateTableLoan());
+            createStatement.executeUpdate(new Props().getCreateTableSavings());
+            createStatement.executeUpdate(new Props().getCreateTableCustomerToLoan());
         } catch (SQLException e) {
             System.out.println("Hiba a tábla létrehozása közben! / Error while creating table!");
             e.printStackTrace();
         }
+
     }
 
     public void getCheckDatabase(){
