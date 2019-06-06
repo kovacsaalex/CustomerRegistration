@@ -28,3 +28,4 @@ Plans:
 - [ ] make pdf documents
 - [ ] monthly, yearly statics 
 - [ ] age/ loan term, age/saving statics etc. 
+- [ ] compare interest rate in singed contract with actual
