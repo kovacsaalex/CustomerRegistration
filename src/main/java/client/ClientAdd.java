@@ -21,12 +21,16 @@ import java.time.format.DateTimeParseException;
 public class ClientAdd extends javax.swing.JFrame {
 
     DateTimeFormatter dtf = DateTimeFormatter.ISO_DATE;
+
     FileChooser openChooseFile = new FileChooser();
     RegexSample regex = new RegexSample();
 
 
-    private final  ImageIcon iconeOk = new ImageIcon("/Users/alexkovacs/Documents/xEclipse/CustomerRegistration/src/main/java/regex/okPic.png");
-    private final  ImageIcon iconeX = new ImageIcon("/Users/alexkovacs/Documents/xEclipse/CustomerRegistration/src/main/java/regex/X.png");
+   
+   
+    private final  ImageIcon iconeOk = regex.getIconeOk();
+    private final  ImageIcon iconeX = regex.getIconeX();
+    
     /**
      * Creates new form ugyfelfelvitele
      */

@@ -8,12 +8,16 @@ import java.util.Properties;
 class Props {
 
     private Properties props = new Properties();
-    private String configSql = "/Users/alex/Documents/Dev_Projects/CustomerRegistration/configSql.ini";
-    private String configMacMini = "/Users/alexkovacs/Documents/Dev_Projects/CustomerRegistration/configSql.ini";
-    private String configPostgreSql = "/Users/alex/Documents/Dev_Projects/CustomerRegistration/configPostgreSql.ini";
+    // private String configSql = "/Users/alex/Documents/Dev_Projects/CustomerRegistration/configSql.ini";
+    // private String configMacMini = "/Users/alexkovacs/Documents/Dev_Projects/CustomerRegistration/configSql.ini";
+     private String configPostgreSql = "/Users/alex/Documents/Dev_Projects/CustomerRegistration/src/main/resources/configPostgreSql.ini";
+    
+
+
+
     private String username = "";
     private String password = "";
-    private String url = "jdbc:mysql://localhost:3306/database?useLegacyDatetimeCode=false&serverTimezone=Europe/Budapest";
+     private String url = "";
 
     //SQL Query for creating database
     private  String createDbSql = "";
@@ -64,13 +68,16 @@ class Props {
     private Properties getProps(){
         File file;
         try {
-            FileInputStream fis = new FileInputStream(configSql);
-            props.load(fis);
+             FileInputStream fis = new FileInputStream(configPostgreSql);
+             props.load(fis);
+            //props.load(Props.class.getResourceAsStream("/configPostgreSql.ini"));
             username = props.getProperty("usr");
             password = props.getProperty("passw");
             url = props.getProperty("url");
             createDbSql = props.getProperty("createDbSql") + " " + props.getProperty("dbName") + ";";
-            createTableCustomer = props.getProperty("createTableSql") + " " + props.getProperty("dbName") + props.getProperty("tableName") + props.getProperty("createTableCustomer");
+             createTableCustomer = props.getProperty("createTableSql") + " " + props.getProperty("dbName") + props.getProperty("tableName") + props.getProperty("createTableCustomer");
+            //createTableCustomer = props.getProperty("createTableSql") + " " + props.getProperty("tableName") +" "+ props.getProperty("createTableCustomer");
+
             createTableLoan = props.getProperty("createTableSql") + " " + props.getProperty("dbName") + props.getProperty("tableNameLoan") + props.getProperty("createTableLoan");
             createTableSavings = props.getProperty("createTableSql") + " " + props.getProperty("dbName") + props.getProperty("tableNameSavings") + props.getProperty("createTableSavings");
             createTableCustomerToLoan = props.getProperty("createTableSql") + " " + props.getProperty("dbName") + props.getProperty("tableNameCustomerToLoan") + props.getProperty("createTableCustomerToLoan");

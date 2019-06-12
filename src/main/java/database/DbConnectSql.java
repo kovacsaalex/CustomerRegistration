@@ -10,21 +10,24 @@ public class DbConnectSql implements AutoCloseable {
 
 
 
-private Connection DbConnect(){
+private Connection DbConnect()  {
+
 
     try {
         System.out.println("Connecting to a selected database...");
+         //Class.forName("org.postgresql.Driver");
+        
         conn = DriverManager.getConnection(props.getUrl(), props.getUsername(), props.getPassword());
         System.out.println("Connected database successfully...");
 
     } catch (SQLException ex) {
-        System.out.println("Valami baj van a connection (híd) létrehozásakor.");
+        System.out.println("Valami baj van a connection létrehozásakor.");
         System.out.println("" + ex);
     }
     return conn;
 }
 
-    public Connection getConnection() {
+    public Connection getConnection()  {
         return DbConnect();
     }
 

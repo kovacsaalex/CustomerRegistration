@@ -1,19 +1,50 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="BookmarkManager">
-    <bookmark url="file://$PROJECT_DIR$/pom.xml" line="55" mnemonic="6" />
+    <bookmark url="file://$PROJECT_DIR$/pom.xml" line="77" mnemonic="6" />
   </component>
   <component name="ChangeListManager">
     <list default="true" id="c4501a20-4305-497a-b328-9f4a0509fed0" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/copyright/MyCopyrightProfile.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/AllException.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_poi_poi_4_1_0.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_postgresql_postgresql_42_2_5.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/org_postgresql_postgresql_42_2_5.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/CustomerRegistration.eml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Manifest.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/configPostgreSql.ini" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/database/dataBaseSql_backup.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/configPostgreSql.ini" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/configSql.ini" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.classpath" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__com_github_virtuald_curvesapi_1_05.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_github_virtuald_curvesapi_1_06.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__commons_codec_commons_codec_1_11.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__commons_codec_commons_codec_1_12.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__mysql_mysql_connector_java_8_0_16.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_commons_commons_collections4_4_2.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_commons_commons_collections4_4_3.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_poi_poi_4_0_1.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_poi_poi_ooxml_4_0_1.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_poi_poi_ooxml_4_1_0.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_poi_poi_ooxml_schemas_4_0_1.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_poi_poi_ooxml_schemas_4_1_0.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_xmlbeans_xmlbeans_3_0_2.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_xmlbeans_xmlbeans_3_1_0.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__postgresql_postgresql_9_1_901_1_jdbc4.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/commons_csv_1.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/poi_4_0_1.xml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.project" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.settings/org.eclipse.jdt.core.prefs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.settings/org.eclipse.m2e.core.prefs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/CustomerRegistration.iml" beforeDir="false" afterPath="$PROJECT_DIR$/CustomerRegistration.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/BigPicture.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/BigPicture.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/client/Client.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/client/Client.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/client/ClientAdd.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/client/ClientAdd.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/database/CheckDatabase.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/database/CheckDatabase.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/database/DatabasPostgreSql.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/database/DatabasPostgreSql.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/database/DbConnectSql.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/database/DbConnectSql.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/database/Props.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/database/Props.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/database/dataBaseSql.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/database/dataBaseSql.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/loan/LoanAdd.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/loan/LoanAdd.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/repository/ReposDataBase.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/repository/ReposDataBase.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/lists/LoanList.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/lists/LoanList.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/regex/RegexSample.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/regex/RegexSample.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resc/X.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resc/okPic.png" beforeDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/classes/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -32,110 +63,70 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/database/Props.java">
+        <entry file="file://$PROJECT_DIR$/src/main/java/database/DbConnectSql.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="21">
-              <caret line="56" column="35" selection-start-line="56" selection-start-column="35" selection-end-line="56" selection-end-column="35" />
+            <state>
+              <caret column="17" selection-start-column="17" selection-end-column="17" />
               <folding>
                 <element signature="imports" expanded="true" />
-                <element signature="e#1957#1958#0" expanded="true" />
-                <element signature="method#getProps#0;class#Props#0" expanded="true" />
-                <element signature="e#4922#4923#0" expanded="true" />
-                <element signature="e#4956#4957#0" expanded="true" />
-                <element signature="e#4995#4996#0" expanded="true" />
-                <element signature="e#5030#5031#0" expanded="true" />
-                <element signature="e#5075#5076#0" expanded="true" />
-                <element signature="e#5116#5117#0" expanded="true" />
-                <element signature="e#5157#5158#0" expanded="true" />
-                <element signature="e#5194#5195#0" expanded="true" />
-                <element signature="e#5236#5237#0" expanded="true" />
-                <element signature="e#5274#5275#0" expanded="true" />
-                <element signature="e#5318#5319#0" expanded="true" />
-                <element signature="e#5358#5359#0" expanded="true" />
-                <element signature="e#5397#5398#0" expanded="true" />
-                <element signature="e#5432#5433#0" expanded="true" />
-                <element signature="e#5471#5472#0" expanded="true" />
-                <element signature="e#5506#5507#0" expanded="true" />
-                <element signature="e#5543#5544#0" expanded="true" />
-                <element signature="e#5576#5577#0" expanded="true" />
-                <element signature="e#5613#5614#0" expanded="true" />
-                <element signature="e#5646#5647#0" expanded="true" />
-                <element signature="e#5683#5684#0" expanded="true" />
-                <element signature="e#5716#5717#0" expanded="true" />
-                <element signature="e#5755#5756#0" expanded="true" />
-                <element signature="e#5790#5791#0" expanded="true" />
-                <element signature="e#5829#5830#0" expanded="true" />
-                <element signature="e#5864#5865#0" expanded="true" />
-                <element signature="e#5905#5906#0" expanded="true" />
-                <element signature="e#5942#5943#0" expanded="true" />
-                <element signature="e#5979#5980#0" expanded="true" />
-                <element signature="e#6012#6013#0" expanded="true" />
-                <element signature="e#6048#6049#0" expanded="true" />
-                <element signature="e#6080#6081#0" expanded="true" />
-                <element signature="e#6116#6117#0" expanded="true" />
-                <element signature="e#6148#6149#0" expanded="true" />
-                <element signature="e#6186#6187#0" expanded="true" />
-                <element signature="e#6220#6221#0" expanded="true" />
-                <element signature="e#6260#6261#0" expanded="true" />
-                <element signature="e#6296#6297#0" expanded="true" />
-                <element signature="e#6332#6333#0" expanded="true" />
-                <element signature="e#6364#6365#0" expanded="true" />
+                <element signature="method#DbConnect#0;class#DbConnectSql#0" expanded="true" />
+                <element signature="method#close#0;class#DbConnectSql#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/configSql.ini">
+        <entry file="file://$PROJECT_DIR$/src/main/java/database/Props.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="532">
-              <caret line="39" column="35" selection-start-line="39" selection-start-column="35" selection-end-line="39" selection-end-column="35" />
+            <state relative-caret-position="337">
+              <caret line="20" selection-start-line="20" selection-end-line="20" />
+              <folding>
+                <element signature="imports" expanded="true" />
+                <element signature="e#1973#5028#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/main/java/database/dataBaseSql.java">
+        <entry file="file://$PROJECT_DIR$/pom.xml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="819">
+              <caret line="39" column="49" lean-forward="true" selection-start-line="39" selection-start-column="49" selection-end-line="39" selection-end-column="49" />
+              <folding>
+                <element signature="n#resources#0;n#build#0;n#project#0;n#!!top" expanded="true" />
+                <element signature="n#resource#0;n#resources#0;n#build#0;n#project#0;n#!!top" expanded="true" />
+                <element signature="n#plugin#0;n#plugins#0;n#build#0;n#project#0;n#!!top" expanded="true" />
+                <element signature="n#configuration#0;n#plugin#0;n#plugins#0;n#build#0;n#project#0;n#!!top" expanded="true" />
+                <element signature="n#plugin#1;n#plugins#0;n#build#0;n#project#0;n#!!top" expanded="true" />
+                <element signature="n#configuration#0;n#plugin#1;n#plugins#0;n#build#0;n#project#0;n#!!top" expanded="true" />
+                <element signature="n#configuration#0;n#plugin#2;n#plugins#0;n#build#0;n#project#0;n#!!top" expanded="true" />
+                <element signature="n#archive#0;n#configuration#0;n#plugin#2;n#plugins#0;n#build#0;n#project#0;n#!!top" expanded="true" />
+                <element signature="n#manifest#0;n#archive#0;n#configuration#0;n#plugin#2;n#plugins#0;n#build#0;n#project#0;n#!!top" expanded="true" />
+                <element signature="n#dependencies#0;n#project#0;n#!!top" expanded="true" />
+                <element signature="n#dependency#0;n#dependencies#0;n#project#0;n#!!top" expanded="true" />
+                <element signature="n#dependency#1;n#dependencies#0;n#project#0;n#!!top" expanded="true" />
+                <element signature="n#dependency#2;n#dependencies#0;n#project#0;n#!!top" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/regex/RegexSample.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="453">
+              <caret line="24" column="56" selection-start-line="24" selection-start-column="56" selection-end-line="24" selection-end-column="56" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Manifest.txt">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="105">
-              <caret line="5" column="15" lean-forward="true" selection-start-line="5" selection-start-column="15" selection-end-line="5" selection-end-column="15" />
-              <folding>
-                <element signature="e#476#477#0" expanded="true" />
-                <element signature="e#517#518#0" expanded="true" />
-                <element signature="e#703#704#0" expanded="true" />
-                <element signature="e#728#729#0" expanded="true" />
-                <element signature="method#insertClient#0;class#dataBaseSql#0" expanded="true" />
-                <element signature="method#insertClientToLoan#0;class#dataBaseSql#0" expanded="true" />
-                <element signature="e#5106#5518#0" expanded="true" />
-                <element signature="method#findbyIdClients#0;class#dataBaseSql#0" expanded="true" />
-                <element signature="method#searchFromClients#0;class#dataBaseSql#0" expanded="true" />
-                <element signature="e#5966#7760#0" expanded="true" />
-                <element signature="method#makeList#0;class#dataBaseSql#0" expanded="true" />
-                <element signature="method#makeOne#0;class#dataBaseSql#0" expanded="true" />
-                <element signature="method#ClientDelete#0;class#dataBaseSql#0" expanded="true" />
-                <element signature="method#insertLoan#0;class#dataBaseSql#0" expanded="true" />
-                <element signature="e#10871#12317#0" expanded="true" />
-                <element signature="e#12326#12655#0" expanded="true" />
-                <element signature="e#12661#13234#0" expanded="true" />
-                <element signature="e#13240#13686#0" expanded="true" />
-                <element signature="e#13692#13905#0" expanded="true" />
-                <element signature="e#13911#14699#0" expanded="true" />
-                <element signature="e#14705#15057#0" expanded="true" />
-                <element signature="e#15093#16287#0" expanded="true" />
-                <element signature="e#16293#17090#0" expanded="true" />
-                <element signature="method#findAllLtp#0;class#dataBaseSql#0" expanded="true" />
-                <element signature="e#17429#17992#0" expanded="true" />
-                <element signature="e#17998#18638#0" expanded="true" />
-                <element signature="e#18887#19349#0" expanded="true" />
-                <element signature="e#19355#19727#0" expanded="true" />
-                <element signature="e#19771#20525#0" expanded="true" />
-                <element signature="e#20787#21786#0" expanded="true" />
-                <element signature="e#21792#22525#0" expanded="true" />
-                <element signature="e#22535#23085#0" expanded="true" />
-                <element signature="e#23097#23343#0" expanded="true" />
-                <element signature="e#23358#23890#0" expanded="true" />
-                <element signature="e#23896#24319#0" expanded="true" />
-              </folding>
+              <caret line="5" column="58" selection-start-line="5" selection-start-column="58" selection-end-line="5" selection-end-column="58" />
             </state>
           </provider>
         </entry>
@@ -151,19 +142,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>Last name</find>
-      <find>Last</find>
-      <find />
-      <find>Last_Name</find>
-      <find>Last Name</find>
-      <find>First Name</find>
-      <find>Maiden Name</find>
-      <find>Birth Place</find>
-      <find>Mother Name</find>
-      <find>Personal Identification Number</find>
-      <find>Tax Number</find>
-      <find>Social Security Number</find>
-      <find>Postal Code</find>
       <find>Moving Time</find>
       <find>ID Card Number</find>
       <find>Address Card Number</find>
@@ -181,6 +159,19 @@
       <find>LoanAmount</find>
       <find>update</find>
       <find>System.out</find>
+      <find>pos</find>
+      <find>url</find>
+      <find>cast</find>
+      <find>'</find>
+      <find>`</find>
+      <find>(11 as int)</find>
+      <find>DEFAULT</find>
+      <find>IS</find>
+      <find>date</find>
+      <find>KEY</find>
+      <find>loan</find>
+      <find>ez</find>
+      <find>End</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -191,22 +182,26 @@
       <list>
         <option value="$PROJECT_DIR$/src/main/java/database/connect.java" />
         <option value="$PROJECT_DIR$/src/main/java/database/DbConnect.java" />
-        <option value="$PROJECT_DIR$/src/main/java/database/databasePostgresql.java" />
         <option value="$PROJECT_DIR$/src/main/java/menu/Menu.java" />
         <option value="$PROJECT_DIR$/config.ini" />
-        <option value="$PROJECT_DIR$/src/main/java/database/DatabasPostgreSql.java" />
-        <option value="$PROJECT_DIR$/configPostgreSql.ini" />
-        <option value="$PROJECT_DIR$/pom.xml" />
-        <option value="$PROJECT_DIR$/src/main/java/database/DbConnectSql.java" />
         <option value="$PROJECT_DIR$/src/main/java/BigPicture.java" />
         <option value="$PROJECT_DIR$/src/main/java/AllException.java" />
-        <option value="$PROJECT_DIR$/src/main/java/client/ClientAdd.java" />
-        <option value="$PROJECT_DIR$/src/main/java/database/CheckDatabase.java" />
         <option value="$PROJECT_DIR$/src/main/java/repository/ReposDataBase.java" />
         <option value="$PROJECT_DIR$/src/main/java/loan/LoanAdd.java" />
-        <option value="$PROJECT_DIR$/src/main/java/database/Props.java" />
+        <option value="$PROJECT_DIR$/src/main/java/database/databasePostgresql.java" />
+        <option value="$PROJECT_DIR$/src/main/java/client/ClientAdd.java" />
+        <option value="$PROJECT_DIR$/src/main/java/client/Client.java" />
+        <option value="$PROJECT_DIR$/src/main/java/database/DatabasPostgreSql.java" />
+        <option value="$PROJECT_DIR$/src/main/java/database/CheckDatabase.java" />
+        <option value="$PROJECT_DIR$/src/main/java/database/dataBaseSql_backup.java" />
         <option value="$PROJECT_DIR$/configSql.ini" />
+        <option value="$PROJECT_DIR$/src/main/java/lists/LoanList.java" />
         <option value="$PROJECT_DIR$/src/main/java/database/dataBaseSql.java" />
+        <option value="$PROJECT_DIR$/configPostgreSql.ini" />
+        <option value="$PROJECT_DIR$/src/main/java/database/DbConnectSql.java" />
+        <option value="$PROJECT_DIR$/Manifest.txt" />
+        <option value="$PROJECT_DIR$/src/main/java/database/Props.java" />
+        <option value="$PROJECT_DIR$/pom.xml" />
       </list>
     </option>
   </component>
@@ -224,49 +219,70 @@
           <item name="" type="16c1761:MavenProjectsStructure$RootNode" />
           <item name="bigpicture" type="9519ce18:MavenProjectsStructure$ProjectNode" />
         </path>
+        <path>
+          <item name="" type="16c1761:MavenProjectsStructure$RootNode" />
+          <item name="bigpicture" type="9519ce18:MavenProjectsStructure$ProjectNode" />
+          <item name="Lifecycle" type="58874e2:MavenProjectsStructure$LifecycleNode" />
+        </path>
+        <path>
+          <item name="" type="16c1761:MavenProjectsStructure$RootNode" />
+          <item name="bigpicture" type="9519ce18:MavenProjectsStructure$ProjectNode" />
+          <item name="Plugins" type="7aea1407:MavenProjectsStructure$PluginsNode" />
+        </path>
+        <path>
+          <item name="" type="16c1761:MavenProjectsStructure$RootNode" />
+          <item name="bigpicture" type="9519ce18:MavenProjectsStructure$ProjectNode" />
+          <item name="Dependencies" type="f4be9f2a:MavenProjectsStructure$DependenciesNode" />
+        </path>
       </expand>
       <select />
     </treeState>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="1476" />
+    <option name="x" value="1466" />
     <option name="y" value="23" />
-    <option name="width" value="1863" />
-    <option name="height" value="1002" />
+    <option name="width" value="1793" />
+    <option name="height" value="1015" />
   </component>
   <component name="ProjectView">
     <navigator proportions="" version="1">
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
-      <pane id="ProjectPane">
-        <subPane>
-          <expand>
-            <path>
-              <item name="CustomerRegistration" type="b2602c69:ProjectViewProjectNode" />
-              <item name="CustomerRegistration" type="462c0819:PsiDirectoryNode" />
-            </path>
-          </expand>
-          <select />
-        </subPane>
-      </pane>
-      <pane id="PackagesPane" />
       <pane id="Course" />
+      <pane id="ProjectPane" />
+      <pane id="Scope" />
+      <pane id="PackagesPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="Downloaded.Files.Path.Enabled" value="false" />
-    <property name="Repository.Attach.Annotations" value="true" />
-    <property name="Repository.Attach.JavaDocs" value="false" />
-    <property name="Repository.Attach.Sources" value="true" />
+    <property name="Repository.Attach.Annotations" value="false" />
+    <property name="Repository.Attach.JavaDocs" value="true" />
+    <property name="Repository.Attach.Sources" value="false" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
-    <property name="project.structure.last.edited" value="Modules" />
-    <property name="project.structure.proportion" value="0.0" />
+    <property name="project.structure.last.edited" value="Libraries" />
+    <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.31149426" />
     <property name="restartRequiresConfirmation" value="false" />
-    <property name="settings.editor.selected.configurable" value="project.scopes" />
+    <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
+  </component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$" />
+      <recent name="$PROJECT_DIR$/src/main/resources" />
+    </key>
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="database" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$" />
+      <recent name="$PROJECT_DIR$/src/main/java" />
+      <recent name="$PROJECT_DIR$/src/main" />
+      <recent name="$PROJECT_DIR$/src/main/resc" />
+      <recent name="$PROJECT_DIR$/src/main/java/database" />
+    </key>
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -340,13 +356,27 @@
       <option name="project" value="LOCAL" />
       <updated>1559728434524</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary=" Update databaseSql Class query from config file">
+      <created>1559747460811</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1559747460811</updated>
+    </task>
+    <task id="LOCAL-00007" summary=" Update databaseSql Class query from config file">
+      <created>1559750259058</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1559750259058</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="1476" y="23" width="1863" height="1002" extended-state="0" />
+    <frame x="1466" y="23" width="1793" height="1015" extended-state="0" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.49887386" visible="true" weight="0.17408018" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.49887386" visible="true" weight="0.17247288" />
       <window_info id="Structure" order="1" sideWeight="0.5011261" side_tool="true" weight="0.16785128" />
       <window_info id="Image Layers" order="2" />
       <window_info id="Designer" order="3" />
@@ -354,7 +384,7 @@
       <window_info id="Capture Tool" order="5" />
       <window_info id="Favorites" order="6" sideWeight="0.5011261" side_tool="true" weight="0.16785128" />
       <window_info anchor="bottom" id="Message" order="0" />
-      <window_info anchor="bottom" id="Find" order="1" weight="0.32885906" />
+      <window_info active="true" anchor="bottom" id="Find" order="1" visible="true" weight="0.32855567" />
       <window_info anchor="bottom" id="Debug" order="2" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="3" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="4" weight="0.4" />
@@ -369,12 +399,12 @@
       <window_info anchor="right" id="Ant Build" order="2" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="3" weight="0.25" />
       <window_info anchor="right" id="Palette" order="4" />
-      <window_info anchor="right" id="Maven" order="5" sideWeight="0.49887386" weight="0.35265172" />
+      <window_info anchor="right" id="Maven" order="5" sideWeight="0.39470783" visible="true" weight="0.34894347" />
       <window_info anchor="right" id="Theme Preview" order="6" />
       <window_info anchor="right" id="Capture Analysis" order="7" />
       <window_info anchor="right" id="Palette&#9;" order="8" />
-      <window_info anchor="right" id="Run" order="9" sideWeight="0.53691274" side_tool="true" visible="true" weight="0.32894015" />
-      <window_info anchor="right" id="Messages" order="10" sideWeight="0.46308726" weight="0.32894015" />
+      <window_info anchor="right" id="Run" order="9" sideWeight="0.6052922" side_tool="true" visible="true" weight="0.34894347" />
+      <window_info anchor="right" id="Messages" order="10" sideWeight="0.45525727" weight="0.32828283" />
     </layout>
     <layout-to-restore>
       <window_info content_ui="combo" id="Project" order="0" sideWeight="0.49887386" visible="true" weight="0.17408018" />
@@ -453,7 +483,8 @@
     <MESSAGE value="Update CheckDatabase Class - Import from config file" />
     <MESSAGE value="Update" />
     <MESSAGE value=" Update Create db, table" />
-    <option name="LAST_COMMIT_MESSAGE" value=" Update Create db, table" />
+    <MESSAGE value=" Update databaseSql Class query from config file" />
+    <option name="LAST_COMMIT_MESSAGE" value=" Update databaseSql Class query from config file" />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="true" />
   </component>
   <component name="editorHistoryManager">
@@ -480,38 +511,8 @@
     <entry file="file://$PROJECT_DIR$/src/main/java/Procfile.txt">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/client/Client.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="189">
-          <caret line="9" selection-start-line="9" selection-end-line="9" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/database/connect.java" />
     <entry file="file://$PROJECT_DIR$/config.ini" />
-    <entry file="file://$PROJECT_DIR$/src/main/java/database/databasePostgresql.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="130">
-          <caret line="15" column="41" selection-start-line="15" selection-start-column="27" selection-end-line="15" selection-end-column="41" />
-          <folding>
-            <element signature="method#openConnection#0;class#databasePostgresql#0" expanded="true" />
-            <element signature="method#databasePostgresql#0;class#databasePostgresql#0" expanded="true" />
-            <element signature="method#statement#0;class#databasePostgresql#0" expanded="true" />
-            <element signature="method#emptyDatabase#0;class#databasePostgresql#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/database/DatabasPostgreSql.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="357">
-          <caret line="17" column="43" lean-forward="true" selection-start-line="17" selection-start-column="43" selection-end-line="17" selection-end-column="43" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/menu/Menu.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="546">
@@ -525,59 +526,6 @@
             <element signature="method#LoanListMenuActionPerformed#0;class#Menu#0" expanded="true" />
             <element signature="method#jMenuItem1ActionPerformed#0;class#Menu#0" expanded="true" />
             <element signature="method#main#0;class#Menu#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/configPostgreSql.ini">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="546">
-          <caret line="26" column="55" selection-start-line="26" selection-start-column="55" selection-end-line="26" selection-end-column="55" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/pom.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="147">
-          <caret line="68" column="19" selection-start-line="68" selection-start-column="19" selection-end-line="68" selection-end-column="19" />
-          <folding>
-            <element signature="n#build#0;n#project#0;n#!!top" expanded="true" />
-            <element signature="n#plugins#0;n#build#0;n#project#0;n#!!top" expanded="true" />
-            <element signature="n#plugin#0;n#plugins#0;n#build#0;n#project#0;n#!!top" expanded="true" />
-            <element signature="n#configuration#0;n#plugin#0;n#plugins#0;n#build#0;n#project#0;n#!!top" expanded="true" />
-            <element signature="n#plugin#1;n#plugins#0;n#build#0;n#project#0;n#!!top" expanded="true" />
-            <element signature="n#configuration#0;n#plugin#1;n#plugins#0;n#build#0;n#project#0;n#!!top" expanded="true" />
-            <element signature="n#archive#0;n#configuration#0;n#plugin#1;n#plugins#0;n#build#0;n#project#0;n#!!top" expanded="true" />
-            <element signature="n#manifest#0;n#archive#0;n#configuration#0;n#plugin#1;n#plugins#0;n#build#0;n#project#0;n#!!top" expanded="true" />
-            <element signature="n#dependencies#0;n#project#0;n#!!top" expanded="true" />
-            <element signature="n#dependency#0;n#dependencies#0;n#project#0;n#!!top" expanded="true" />
-            <element signature="n#dependency#1;n#dependencies#0;n#project#0;n#!!top" expanded="true" />
-            <element signature="n#dependency#2;n#dependencies#0;n#project#0;n#!!top" expanded="true" />
-            <element signature="n#dependency#3;n#dependencies#0;n#project#0;n#!!top" expanded="true" />
-            <element signature="n#exclusions#0;n#dependency#3;n#dependencies#0;n#project#0;n#!!top" expanded="true" />
-            <element signature="n#exclusion#0;n#exclusions#0;n#dependency#3;n#dependencies#0;n#project#0;n#!!top" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/database/DbConnectSql.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="105">
-          <caret line="7" column="35" lean-forward="true" selection-start-line="7" selection-start-column="35" selection-end-line="7" selection-end-column="35" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="method#DbConnect#0;class#DbConnectSql#0" expanded="true" />
-            <element signature="method#close#0;class#DbConnectSql#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/BigPicture.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="357">
-          <caret line="17" column="28" selection-start-line="17" selection-start-column="28" selection-end-line="17" selection-end-column="28" />
-          <folding>
-            <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -605,32 +553,6 @@
             <element signature="e#1680#1681#0" expanded="true" />
             <element signature="e#1749#1750#0" expanded="true" />
             <element signature="method#ClientListaButtonActionPerformed#0;class#CLientList#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/database/CheckDatabase.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="315">
-          <caret line="29" column="13" selection-start-line="29" selection-start-column="13" selection-end-line="29" selection-end-column="13" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="method#CheckDatabase#0;class#CheckDatabase#0" expanded="true" />
-            <element signature="e#1644#1645#0" expanded="true" />
-            <element signature="e#1678#1679#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/client/ClientAdd.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="10373">
-          <caret line="897" column="31" selection-start-line="897" selection-start-column="31" selection-end-line="897" selection-end-column="31" />
-          <folding>
-            <element signature="e#1320#1409#0" expanded="true" />
-            <element signature="e#1071#28376#0" expanded="true" />
-            <element signature="e#28382#30825#0" expanded="true" />
-            <element signature="e#44001#46691#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -670,105 +592,239 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/database/Props.java">
+    <entry file="file://$PROJECT_DIR$/.idea/copyright/MyCopyrightProfile.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="21">
-          <caret line="56" column="35" selection-start-line="56" selection-start-column="35" selection-end-line="56" selection-end-column="35" />
+        <state relative-caret-position="105">
+          <caret line="5" column="12" lean-forward="true" selection-start-line="5" selection-start-column="12" selection-end-line="5" selection-end-column="12" />
           <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#1957#1958#0" expanded="true" />
-            <element signature="method#getProps#0;class#Props#0" expanded="true" />
-            <element signature="e#4922#4923#0" expanded="true" />
-            <element signature="e#4956#4957#0" expanded="true" />
-            <element signature="e#4995#4996#0" expanded="true" />
-            <element signature="e#5030#5031#0" expanded="true" />
-            <element signature="e#5075#5076#0" expanded="true" />
-            <element signature="e#5116#5117#0" expanded="true" />
-            <element signature="e#5157#5158#0" expanded="true" />
-            <element signature="e#5194#5195#0" expanded="true" />
-            <element signature="e#5236#5237#0" expanded="true" />
-            <element signature="e#5274#5275#0" expanded="true" />
-            <element signature="e#5318#5319#0" expanded="true" />
-            <element signature="e#5358#5359#0" expanded="true" />
-            <element signature="e#5397#5398#0" expanded="true" />
-            <element signature="e#5432#5433#0" expanded="true" />
-            <element signature="e#5471#5472#0" expanded="true" />
-            <element signature="e#5506#5507#0" expanded="true" />
-            <element signature="e#5543#5544#0" expanded="true" />
-            <element signature="e#5576#5577#0" expanded="true" />
-            <element signature="e#5613#5614#0" expanded="true" />
-            <element signature="e#5646#5647#0" expanded="true" />
-            <element signature="e#5683#5684#0" expanded="true" />
-            <element signature="e#5716#5717#0" expanded="true" />
-            <element signature="e#5755#5756#0" expanded="true" />
-            <element signature="e#5790#5791#0" expanded="true" />
-            <element signature="e#5829#5830#0" expanded="true" />
-            <element signature="e#5864#5865#0" expanded="true" />
-            <element signature="e#5905#5906#0" expanded="true" />
-            <element signature="e#5942#5943#0" expanded="true" />
-            <element signature="e#5979#5980#0" expanded="true" />
-            <element signature="e#6012#6013#0" expanded="true" />
-            <element signature="e#6048#6049#0" expanded="true" />
-            <element signature="e#6080#6081#0" expanded="true" />
-            <element signature="e#6116#6117#0" expanded="true" />
-            <element signature="e#6148#6149#0" expanded="true" />
-            <element signature="e#6186#6187#0" expanded="true" />
-            <element signature="e#6220#6221#0" expanded="true" />
-            <element signature="e#6260#6261#0" expanded="true" />
-            <element signature="e#6296#6297#0" expanded="true" />
-            <element signature="e#6332#6333#0" expanded="true" />
-            <element signature="e#6364#6365#0" expanded="true" />
+            <element signature="n#component#0;n#!!top" expanded="true" />
+            <element signature="n#copyright#0;n#component#0;n#!!top" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/configSql.ini">
+    <entry file="file://$PROJECT_DIR$/src/main/java/BigPicture.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="532">
-          <caret line="39" column="35" selection-start-line="39" selection-start-column="35" selection-end-line="39" selection-end-column="35" />
+        <state relative-caret-position="315">
+          <caret line="15" column="32" selection-start-line="15" selection-start-column="32" selection-end-line="15" selection-end-column="32" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/database/databasePostgresql.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="223">
+          <caret line="15" column="3" selection-start-line="15" selection-start-column="3" selection-end-line="15" selection-end-column="3" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar:///Library/Java/JavaVirtualMachines/jdk-12.0.1.jdk/Contents/Home/lib/src.zip!/java.sql/java/sql/Date.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2247">
+          <caret line="140" column="18" selection-start-line="140" selection-start-column="18" selection-end-line="140" selection-end-column="18" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/client/ClientAdd.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="210">
+          <caret line="22" column="46" selection-start-line="22" selection-start-column="46" selection-end-line="22" selection-end-column="46" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/client/ClientAdd.form">
+      <provider selected="true" editor-type-id="ui-designer" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/client/Client.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="343">
+          <caret line="155" column="5" selection-start-line="155" selection-start-column="5" selection-end-line="155" selection-end-column="5" />
+          <folding>
+            <element signature="e#4280#4281#0" expanded="true" />
+            <element signature="e#4318#4319#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/database/DatabasPostgreSql.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="189">
+          <caret line="9" column="34" lean-forward="true" selection-start-line="9" selection-start-column="34" selection-end-line="9" selection-end-column="34" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/postgresql/postgresql/9.1-901-1.jdbc4/postgresql-9.1-901-1.jdbc4-sources.jar!/org/postgresql/jdbc2/AbstractJdbc2Statement.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="301">
+          <caret line="302" lean-forward="true" selection-start-line="302" selection-end-line="302" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/database/dataBaseSql_backup.java">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/database/CheckDatabase.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1344">
+          <caret line="64" column="12" lean-forward="true" selection-start-line="64" selection-start-column="12" selection-end-line="64" selection-end-column="12" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="method#CheckDatabase#0;class#CheckDatabase#0" expanded="true" />
+            <element signature="e#2377#2378#0" expanded="true" />
+            <element signature="e#2411#2412#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/lists/LoanList.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="252">
+          <caret line="20" column="52" lean-forward="true" selection-start-line="20" selection-start-column="52" selection-end-line="20" selection-end-column="52" />
+          <folding>
+            <element signature="e#825#914#0" expanded="true" />
+            <element signature="method#initComponents#0;class#LoanList#0" expanded="true" />
+            <element signature="class#1484:1668" expanded="true" />
+            <element signature="e#1590#1591#0" expanded="true" />
+            <element signature="e#1657#1658#0" expanded="true" />
+            <element signature="method#LoanListaButtonActionPerformed#0;class#LoanList#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/target/maven-archiver/pom.properties">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/index.html">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/database/configPostgreSql.ini">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="252">
+          <caret line="12" column="12" lean-forward="true" selection-start-line="12" selection-start-column="12" selection-end-line="12" selection-end-column="12" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/configSql.ini">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.settings/org.eclipse.jdt.core.prefs" />
+    <entry file="file://$PROJECT_DIR$/.settings/org.eclipse.m2e.core.prefs" />
+    <entry file="file://$PROJECT_DIR$/CustomerRegistration.iml">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/configPostgreSql.ini">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="378">
+          <caret line="18" selection-start-line="18" selection-end-line="18" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/configPostgreSql.ini">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/database/dataBaseSql.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="105">
-          <caret line="5" column="15" lean-forward="true" selection-start-line="5" selection-start-column="15" selection-end-line="5" selection-end-column="15" />
+        <state relative-caret-position="793">
+          <caret line="472" column="6" selection-start-line="472" selection-start-column="6" selection-end-line="472" selection-end-column="6" />
           <folding>
-            <element signature="e#476#477#0" expanded="true" />
-            <element signature="e#517#518#0" expanded="true" />
-            <element signature="e#703#704#0" expanded="true" />
-            <element signature="e#728#729#0" expanded="true" />
-            <element signature="method#insertClient#0;class#dataBaseSql#0" expanded="true" />
-            <element signature="method#insertClientToLoan#0;class#dataBaseSql#0" expanded="true" />
-            <element signature="e#5106#5518#0" expanded="true" />
-            <element signature="method#findbyIdClients#0;class#dataBaseSql#0" expanded="true" />
-            <element signature="method#searchFromClients#0;class#dataBaseSql#0" expanded="true" />
-            <element signature="e#5966#7760#0" expanded="true" />
-            <element signature="method#makeList#0;class#dataBaseSql#0" expanded="true" />
-            <element signature="method#makeOne#0;class#dataBaseSql#0" expanded="true" />
-            <element signature="method#ClientDelete#0;class#dataBaseSql#0" expanded="true" />
-            <element signature="method#insertLoan#0;class#dataBaseSql#0" expanded="true" />
-            <element signature="e#10871#12317#0" expanded="true" />
-            <element signature="e#12326#12655#0" expanded="true" />
-            <element signature="e#12661#13234#0" expanded="true" />
-            <element signature="e#13240#13686#0" expanded="true" />
-            <element signature="e#13692#13905#0" expanded="true" />
-            <element signature="e#13911#14699#0" expanded="true" />
-            <element signature="e#14705#15057#0" expanded="true" />
-            <element signature="e#15093#16287#0" expanded="true" />
-            <element signature="e#16293#17090#0" expanded="true" />
-            <element signature="method#findAllLtp#0;class#dataBaseSql#0" expanded="true" />
-            <element signature="e#17429#17992#0" expanded="true" />
-            <element signature="e#17998#18638#0" expanded="true" />
-            <element signature="e#18887#19349#0" expanded="true" />
-            <element signature="e#19355#19727#0" expanded="true" />
-            <element signature="e#19771#20525#0" expanded="true" />
-            <element signature="e#20787#21786#0" expanded="true" />
-            <element signature="e#21792#22525#0" expanded="true" />
-            <element signature="e#22535#23085#0" expanded="true" />
-            <element signature="e#23097#23343#0" expanded="true" />
-            <element signature="e#23358#23890#0" expanded="true" />
-            <element signature="e#23896#24319#0" expanded="true" />
+            <element signature="imports" expanded="true" />
+            <element signature="e#17754#18484#0" expanded="true" />
+            <element signature="e#18490#18821#0" expanded="true" />
+            <element signature="e#18827#19393#0" expanded="true" />
+            <element signature="e#19399#19841#0" expanded="true" />
+            <element signature="e#19847#20084#0" expanded="true" />
+            <element signature="e#20090#20552#0" expanded="true" />
+            <element signature="e#20558#20913#0" expanded="true" />
+            <element signature="e#20958#21830#0" expanded="true" />
+            <element signature="e#21836#22081#0" expanded="true" />
+            <element signature="e#22087#23239#0" expanded="true" />
+            <element signature="e#23984#24655#0" expanded="true" />
+            <element signature="e#24661#24906#0" expanded="true" />
+            <element signature="e#24912#25428#0" expanded="true" />
+            <element signature="e#25434#25857#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/_config.yml">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/configSql.ini">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="377">
+          <caret line="18" column="360" lean-forward="true" selection-start-line="18" selection-start-column="360" selection-end-line="18" selection-end-column="360" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/nb-configuration.xml" />
+    <entry file="file://$PROJECT_DIR$/nbactions.xml" />
+    <entry file="file://$PROJECT_DIR$/nbactions-release-profile.xml" />
+    <entry file="file://$PROJECT_DIR$/configPostgreSql.ini">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="399">
+          <caret line="19" column="71" lean-forward="true" selection-start-line="19" selection-start-column="71" selection-end-line="19" selection-end-column="71" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.classpath" />
+    <entry file="file://$PROJECT_DIR$/.project" />
+    <entry file="file://$PROJECT_DIR$/src/main/java/database/DbConnectSql.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret column="17" selection-start-column="17" selection-end-column="17" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="method#DbConnect#0;class#DbConnectSql#0" expanded="true" />
+            <element signature="method#close#0;class#DbConnectSql#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Manifest.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="105">
+          <caret line="5" column="58" selection-start-line="5" selection-start-column="58" selection-end-line="5" selection-end-column="58" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/regex/RegexSample.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="453">
+          <caret line="24" column="56" selection-start-line="24" selection-start-column="56" selection-end-line="24" selection-end-column="56" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/database/Props.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="337">
+          <caret line="20" selection-start-line="20" selection-end-line="20" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#1973#5028#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="819">
+          <caret line="39" column="49" lean-forward="true" selection-start-line="39" selection-start-column="49" selection-end-line="39" selection-end-column="49" />
+          <folding>
+            <element signature="n#resources#0;n#build#0;n#project#0;n#!!top" expanded="true" />
+            <element signature="n#resource#0;n#resources#0;n#build#0;n#project#0;n#!!top" expanded="true" />
+            <element signature="n#plugin#0;n#plugins#0;n#build#0;n#project#0;n#!!top" expanded="true" />
+            <element signature="n#configuration#0;n#plugin#0;n#plugins#0;n#build#0;n#project#0;n#!!top" expanded="true" />
+            <element signature="n#plugin#1;n#plugins#0;n#build#0;n#project#0;n#!!top" expanded="true" />
+            <element signature="n#configuration#0;n#plugin#1;n#plugins#0;n#build#0;n#project#0;n#!!top" expanded="true" />
+            <element signature="n#configuration#0;n#plugin#2;n#plugins#0;n#build#0;n#project#0;n#!!top" expanded="true" />
+            <element signature="n#archive#0;n#configuration#0;n#plugin#2;n#plugins#0;n#build#0;n#project#0;n#!!top" expanded="true" />
+            <element signature="n#manifest#0;n#archive#0;n#configuration#0;n#plugin#2;n#plugins#0;n#build#0;n#project#0;n#!!top" expanded="true" />
+            <element signature="n#dependencies#0;n#project#0;n#!!top" expanded="true" />
+            <element signature="n#dependency#0;n#dependencies#0;n#project#0;n#!!top" expanded="true" />
+            <element signature="n#dependency#1;n#dependencies#0;n#project#0;n#!!top" expanded="true" />
+            <element signature="n#dependency#2;n#dependencies#0;n#project#0;n#!!top" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -782,7 +838,7 @@
           <splitter-proportions>
             <option name="proportions">
               <list>
-                <option value="0.2" />
+                <option value="0.31149426" />
               </list>
             </option>
           </splitter-proportions>
@@ -802,10 +858,11 @@
       </state>
       <state key="FacetStructureConfigurable.UI">
         <settings>
+          <last-edited>No facets are configured</last-edited>
           <splitter-proportions>
             <option name="proportions">
               <list>
-                <option value="0.2" />
+                <option value="0.31149426" />
               </list>
             </option>
           </splitter-proportions>
@@ -813,10 +870,11 @@
       </state>
       <state key="GlobalLibrariesConfigurable.UI">
         <settings>
+          <last-edited>resources</last-edited>
           <splitter-proportions>
             <option name="proportions">
               <list>
-                <option value="0.2" />
+                <option value="0.31149426" />
               </list>
             </option>
           </splitter-proportions>
@@ -824,10 +882,11 @@
       </state>
       <state key="JdkListConfigurable.UI">
         <settings>
+          <last-edited>12</last-edited>
           <splitter-proportions>
             <option name="proportions">
               <list>
-                <option value="0.2" />
+                <option value="0.31149426" />
               </list>
             </option>
           </splitter-proportions>
@@ -835,10 +894,11 @@
       </state>
       <state key="ModuleStructureConfigurable.UI">
         <settings>
+          <last-edited>CustomerRegistration</last-edited>
           <splitter-proportions>
             <option name="proportions">
               <list>
-                <option value="0.2" />
+                <option value="0.31149426" />
               </list>
             </option>
           </splitter-proportions>
@@ -846,7 +906,7 @@
       </state>
       <state key="ProjectLibrariesConfigurable.UI">
         <settings>
-          <last-edited>commons-csv-1</last-edited>
+          <last-edited>Maven: com.github.virtuald:curvesapi:1.06</last-edited>
           <splitter-proportions>
             <option name="proportions">
               <list>

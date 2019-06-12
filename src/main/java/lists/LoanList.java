@@ -1,15 +1,14 @@
 
 package lists;
 
-import java.util.ArrayList;
-import client.Client;
 import database.dataBaseSql;
-import java.sql.SQLException;
-import java.util.List;
-import javax.swing.table.DefaultTableModel;
 import loan.Loan;
-import ltp.Ltp;
 import repository.ReposDataBase;
+
+import javax.swing.table.DefaultTableModel;
+import java.sql.SQLException;
+import java.util.ArrayList;
+import java.util.List;
 
 /**
  *
@@ -164,7 +163,7 @@ public class LoanList extends javax.swing.JFrame {
             }
                
         } catch (SQLException | IndexOutOfBoundsException | NumberFormatException e) {
-            System.out.println(e.getMessage());
+            System.out.println("a: "+e.getMessage());
         }
    
       

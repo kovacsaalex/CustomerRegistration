@@ -36,11 +36,35 @@ public class CheckDatabase {
 
         try {
             createStatement.executeUpdate(new Props().getCreateTableCustomer());
-            createStatement.executeUpdate(new Props().getCreateTableLoan());
-            createStatement.executeUpdate(new Props().getCreateTableSavings());
-            createStatement.executeUpdate(new Props().getCreateTableCustomerToLoan());
+
         } catch (SQLException e) {
-            System.out.println("Hiba a tábla létrehozása közben! / Error while creating table!");
+            System.out.println("Hiba a customer tábla létrehozása közben! / Error while creating table!");
+            e.printStackTrace();
+        }
+        try {
+
+            createStatement.executeUpdate(new Props().getCreateTableLoan());
+
+        } catch (SQLException e) {
+            System.out.println("Hiba a hitel tábla létrehozása közben! / Error while creating table!");
+            e.printStackTrace();
+        }
+
+        try {
+
+                   createStatement.executeUpdate(new Props().getCreateTableSavings());
+
+        } catch (SQLException e) {
+            System.out.println("Hiba a savings tábla létrehozása közben! / Error while creating table!");
+            e.printStackTrace();
+        }
+
+        try {
+
+
+                   createStatement.executeUpdate(new Props().getCreateTableCustomerToLoan());
+        } catch (SQLException e) {
+            System.out.println("Hiba a CtoL tábla létrehozása közben! / Error while creating table!");
             e.printStackTrace();
         }
 

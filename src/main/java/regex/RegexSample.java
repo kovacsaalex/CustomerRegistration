@@ -1,7 +1,7 @@
 package regex;
 
+import javax.swing.*;
 import java.util.regex.Pattern;
-import javax.swing.ImageIcon;
 
 /**
  * This class Authorise the forms data 
@@ -9,8 +9,11 @@ import javax.swing.ImageIcon;
  */
 public class RegexSample {
 
-    private final  ImageIcon iconeOk = new ImageIcon("/Users/alexkovacs/Documents/xEclipse/CustomerRegistration/src/main/java/regex/okPic.png");
-    private final  ImageIcon iconeX = new ImageIcon("/Users/alexkovacs/Documents/xEclipse/CustomerRegistration/src/main/java/regex/X.png");
+    public RegexSample() {
+    }
+
+    private final  ImageIcon iconeOk = new ImageIcon("/Users/alex/Documents/Dev_Projects/CustomerRegistration/src/main/resources/okPic.png");
+    private final  ImageIcon iconeX = new ImageIcon("/Users/alex/Documents/Dev_Projects/CustomerRegistration/src/main/resources/X.png");
     public final String REGEXNAME = "([A-Za-zaáeéiíoóöőuúüűAÁEÉIÍOÓÖŐUÚÜŰ .-]+)";
     public final String REGEXEMAIL = "[\\w\\.]+@\\w+\\.[A-Za-z\\.]{2,5}";
     public final String REGEXDATE = "\\d{4}-\\d{2}-\\d{2}";

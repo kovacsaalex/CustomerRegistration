@@ -15,7 +15,7 @@ import java.util.List;
 /**
  * This class make SQL Query with MySql database
  */
-public class dataBaseSql implements ReposDataBase {
+public class dataBaseSql_backup implements ReposDataBase {
 
     DbConnectSql cn = new DbConnectSql();
     Props props = new Props();
@@ -23,7 +23,7 @@ public class dataBaseSql implements ReposDataBase {
 
 
 
-    public dataBaseSql() {
+    public dataBaseSql_backup() {
     }
 
 
@@ -79,14 +79,13 @@ public class dataBaseSql implements ReposDataBase {
             String test3 = adat.getSzulIdo().toString().replace("-", "");
             LocalDate lc = LocalDate.parse(test3, DateTimeFormatter.BASIC_ISO_DATE);
             insertNewClient.setDate(17, Date.valueOf(lc));
-            insertNewClient.executeUpdate();
 
-           /* ResultSet generatedKeys = insertNewClient.getGeneratedKeys();
+
+            insertNewClient.executeUpdate();
+            ResultSet generatedKeys = insertNewClient.getGeneratedKeys();
             if (generatedKeys.next()) {
                 id = generatedKeys.getInt(1);
-            }*/
-
-
+            }
         } catch (SQLException ex) {
             System.out.println(ex.getMessage());
         }
@@ -100,8 +99,8 @@ public class dataBaseSql implements ReposDataBase {
      */
     @Override
     public void insertClientToLoan(Client adat) {
-      //  try (PreparedStatement insertNewClient = this.getConnection().prepareStatement(props.getInsertClientToLoan(), PreparedStatement.RETURN_GENERATED_KEYS)) {
-            try (PreparedStatement insertNewClient = this.getConnection().prepareStatement(props.getInsertClientToLoan())) {
+        try (PreparedStatement insertNewClient = this.getConnection().prepareStatement(props.getInsertClientToLoan(), PreparedStatement.RETURN_GENERATED_KEYS)) {
+
             insertNewClient.setString(1, adat.getVezetekNev());
             insertNewClient.setString(2, adat.getKeresztNevek());
             insertNewClient.setString(3, adat.getLeanyKoriNev());
@@ -122,7 +121,7 @@ public class dataBaseSql implements ReposDataBase {
             //   insertNewClient.setDate(17, Date.valueOf(adat.getSzulIdo()));
             // if you use PostgreSql use this
 
-           String test3 = adat.getSzulIdo().toString().replace("-", "");
+            String test3 = adat.getSzulIdo().toString().replace("-", "");
             LocalDate lc = LocalDate.parse(test3, DateTimeFormatter.BASIC_ISO_DATE);
             insertNewClient.setDate(17, Date.valueOf(lc));
 
@@ -212,7 +211,7 @@ public class dataBaseSql implements ReposDataBase {
         clientUpdate.setString(15, client.getLakCimSzam());
         clientUpdate.setString(16, client.getTelSzam());
         // if you use MySql - use this
-       //  clientUpdate.setDate(17, Date.valueOf(client.getSzulIdo()));
+        // clientUpdate.setDate(17, Date.valueOf(client.getSzulIdo()));
         // if you use PostgreSql use this
 
         String test3 = client.getSzulIdo().toString().replace("-", "");
@@ -259,7 +258,7 @@ public class dataBaseSql implements ReposDataBase {
         //  sz.setSzulIdo(rs.getDate("Birth_date").toLocalDate());
 
         // if you use PostgreSql use this
-       try {
+        try {
             sz.setSzulIdo(rs.getDate("Birth_date").toLocalDate());
         } catch (SQLException | NullPointerException e) {
             e.printStackTrace();
@@ -420,20 +419,13 @@ public class dataBaseSql implements ReposDataBase {
         return ret;
     }
 
-    private Loan makeLoanOne(ResultSet rs) throws SQLException, NullPointerException {
+    private Loan makeLoanOne(ResultSet rs) throws SQLException {
         Loan sz = new Loan();
         sz.setUgyfelId(rs.getInt("Id_loan"));
         sz.setHitelTipus(rs.getString("Type"));
         sz.setOsszeg(rs.getInt("Amount"));
-
-
-        try {
-            sz.setKezdet(LocalDate.parse(rs.getString("Start")));
-            sz.setLejarat(LocalDate.parse(rs.getString("End")));
-        } catch (NullPointerException e) {
-            e.printStackTrace();
-        }
-
+        sz.setKezdet(LocalDate.parse(rs.getString("Start")));
+        sz.setLejarat(LocalDate.parse(rs.getString("End")));
         sz.setFutamido(rs.getInt("Term"));
         sz.setKamatlab(rs.getDouble("Interest_Rate"));
         sz.setHrsz(rs.getString("Hrsz"));
@@ -470,8 +462,7 @@ public class dataBaseSql implements ReposDataBase {
     @Override
     public void insertLtp(Ltp adat) {
         try {
-    //        try (PreparedStatement insertNewLtp = this.getConnection().prepareStatement(props.getInsertLtp(), PreparedStatement.RETURN_GENERATED_KEYS)) {
-                try (PreparedStatement insertNewLtp = this.getConnection().prepareStatement(props.getInsertLtp())) {
+            try (PreparedStatement insertNewLtp = this.getConnection().prepareStatement(props.getInsertLtp(), PreparedStatement.RETURN_GENERATED_KEYS)) {
                 insertNewLtp.setInt(1, adat.getUgyfelId());
                 insertNewLtp.setInt(2, adat.getSzerzOsszeg());
                 insertNewLtp.setDate(3, Date.valueOf(adat.getLtpStart()));
@@ -481,9 +472,9 @@ public class dataBaseSql implements ReposDataBase {
                 insertNewLtp.executeUpdate();
                 ResultSet generatedKeys = insertNewLtp.getGeneratedKeys();
 
-             /*   if (generatedKeys.next()) {
+                if (generatedKeys.next()) {
                     id = generatedKeys.getInt(1);
-                }*/
+                }
             }
 
         } catch (SQLException | NullPointerException e) {
@@ -699,9 +690,9 @@ public class dataBaseSql implements ReposDataBase {
 
     // *****************
     public static void main(String[] args) throws SQLException {
-        ReposDataBase insert = new dataBaseSql();
-        dataBaseSql test = new dataBaseSql();
-        ReposDataBase adatok = new dataBaseSql();
+        ReposDataBase insert = new dataBaseSql_backup();
+        dataBaseSql_backup test = new dataBaseSql_backup();
+        ReposDataBase adatok = new dataBaseSql_backup();
         List<AllKindList> loanlist = new ArrayList<>();
         test.allKindList();
         loanlist = test.allKindList();

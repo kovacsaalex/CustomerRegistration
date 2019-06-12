@@ -9,7 +9,7 @@ import menu.Menu;
 public class BigPicture {
 
 
-    public static void main(String[] args) {
+    public static void main(String[] args)  {
 
         new Menu().setVisible(true);
         // Get connenction

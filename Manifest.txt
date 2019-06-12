@@ -1,0 +1,6 @@
+
+Main-Class:BigPicture
+Class-Path: poi-4.0.1.jar commons-codec-1.11.jar commons-collections4-
+ 4.2.jar commons-math3-3.6.1.jar poi-ooxml-4.0.1.jar poi-ooxml-schemas
+ -4.0.1.jar xmlbeans-3.0.2.jar commons-compress-1.18.jar curvesapi-1.0
+ 5.jar postgresql-9.1-901-1.jdbc4.jar mysql-connector-java-8.0.16.jar
