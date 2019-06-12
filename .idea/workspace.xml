@@ -4,12 +4,20 @@
     <bookmark url="file://$PROJECT_DIR$/pom.xml" line="77" mnemonic="6" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="c4501a20-4305-497a-b328-9f4a0509fed0" name="Default Changelist" comment=" Update 1">
-      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
+    <list default="true" id="c4501a20-4305-497a-b328-9f4a0509fed0" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/com_github_virtuald_curvesapi_1_06.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/commons_codec_commons_codec_1_12.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/org_apache_commons_commons_collections4_4_3.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/org_apache_commons_commons_compress_1_18.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/org_apache_commons_commons_math3_3_6_1.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/org_apache_poi_poi_4_1_0.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/org_apache_poi_poi_ooxml_4_1_0.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/org_apache_poi_poi_ooxml_schemas_4_1_0.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/org_apache_xmlbeans_xmlbeans_3_1_0.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/CustomerRegistration.iml" beforeDir="false" afterPath="$PROJECT_DIR$/CustomerRegistration.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/database/Props.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/database/Props.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/client/ClientAdd.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/client/ClientAdd.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/fileChooser/FileChooser.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/fileChooser/FileChooser.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/classes/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -26,27 +34,7 @@
     <favorites_list name="CustomerRegistration" />
   </component>
   <component name="FileEditorManager">
-    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/database/Props.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="206">
-              <caret line="77" column="57" selection-start-line="77" selection-start-column="57" selection-end-line="77" selection-end-column="57" />
-              <folding>
-                <element signature="imports" expanded="true" />
-                <element signature="e#2006#2007#0" expanded="true" />
-                <element signature="e#2039#2040#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/main/java/images/configPostgreSql.ini">
-          <provider selected="true" editor-type-id="text-editor" />
-        </entry>
-      </file>
-    </leaf>
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300" />
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -104,7 +92,6 @@
         <option value="$PROJECT_DIR$/src/main/java/repository/ReposDataBase.java" />
         <option value="$PROJECT_DIR$/src/main/java/loan/LoanAdd.java" />
         <option value="$PROJECT_DIR$/src/main/java/database/databasePostgresql.java" />
-        <option value="$PROJECT_DIR$/src/main/java/client/ClientAdd.java" />
         <option value="$PROJECT_DIR$/src/main/java/client/Client.java" />
         <option value="$PROJECT_DIR$/src/main/java/database/DatabasPostgreSql.java" />
         <option value="$PROJECT_DIR$/src/main/java/database/CheckDatabase.java" />
@@ -117,6 +104,8 @@
         <option value="$PROJECT_DIR$/Manifest.txt" />
         <option value="$PROJECT_DIR$/pom.xml" />
         <option value="$PROJECT_DIR$/src/main/java/database/Props.java" />
+        <option value="$PROJECT_DIR$/src/main/java/fileChooser/FileChooser.java" />
+        <option value="$PROJECT_DIR$/src/main/java/client/ClientAdd.java" />
       </list>
     </option>
   </component>
@@ -169,7 +158,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="PackagesPane" />
+      <pane id="Course" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -201,6 +190,14 @@
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="database" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="CustomerRegistration" type="b2602c69:ProjectViewProjectNode" />
+              <item name="CustomerRegistration" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
               <item name="images" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -215,7 +212,7 @@
         </subPane>
       </pane>
       <pane id="Scope" />
-      <pane id="Course" />
+      <pane id="PackagesPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -227,24 +224,24 @@
     <property name="last_opened_file_path" value="$PROJECT_DIR$/src/main/java/images" />
     <property name="project.structure.last.edited" value="Libraries" />
     <property name="project.structure.proportion" value="0.15" />
-    <property name="project.structure.side.proportion" value="0.31149426" />
+    <property name="project.structure.side.proportion" value="0.37775445" />
     <property name="restartRequiresConfirmation" value="false" />
     <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
   </component>
   <component name="RecentsManager">
-    <key name="MoveFile.RECENT_KEYS">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/main/java/images" />
+      <recent name="$PROJECT_DIR$/src/main/java/database" />
       <recent name="$PROJECT_DIR$" />
-      <recent name="$PROJECT_DIR$/src/main/resources" />
+      <recent name="$PROJECT_DIR$/src/main/java" />
+      <recent name="$PROJECT_DIR$/src/main" />
     </key>
     <key name="CopyClassDialog.RECENTS_KEY">
       <recent name="database" />
     </key>
-    <key name="CopyFile.RECENT_KEYS">
+    <key name="MoveFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$" />
-      <recent name="$PROJECT_DIR$/src/main/java" />
-      <recent name="$PROJECT_DIR$/src/main" />
-      <recent name="$PROJECT_DIR$/src/main/resc" />
-      <recent name="$PROJECT_DIR$/src/main/java/database" />
+      <recent name="$PROJECT_DIR$/src/main/resources" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -340,13 +337,20 @@
       <option name="project" value="LOCAL" />
       <updated>1560320052363</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary=" Update..">
+      <created>1560323354001</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1560323354001</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="ToolWindowManager">
     <frame x="1466" y="23" width="1834" height="1015" extended-state="0" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.49887386" visible="true" weight="0.171875" />
+      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.49887386" visible="true" weight="0.1735491" />
       <window_info id="Structure" order="1" sideWeight="0.5011261" side_tool="true" weight="0.16785128" />
       <window_info id="Image Layers" order="2" />
       <window_info id="Designer" order="3" />
@@ -369,12 +373,12 @@
       <window_info anchor="right" id="Ant Build" order="2" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="3" weight="0.25" />
       <window_info anchor="right" id="Palette" order="4" />
-      <window_info anchor="right" id="Maven" order="5" sideWeight="0.3936053" visible="true" weight="0.34095982" />
+      <window_info active="true" anchor="right" id="Maven" order="5" sideWeight="0.39140022" visible="true" weight="0.34095982" />
       <window_info anchor="right" id="Theme Preview" order="6" />
       <window_info anchor="right" id="Capture Analysis" order="7" />
       <window_info anchor="right" id="Palette&#9;" order="8" />
-      <window_info anchor="right" id="Run" order="9" sideWeight="0.6063947" side_tool="true" visible="true" weight="0.34095982" />
-      <window_info anchor="right" id="Messages" order="10" sideWeight="0.45424476" weight="0.32781267" />
+      <window_info anchor="right" id="Run" order="9" sideWeight="0.6085998" side_tool="true" visible="true" weight="0.34095982" />
+      <window_info anchor="right" id="Messages" order="10" sideWeight="0.45314223" weight="0.32756695" />
     </layout>
     <layout-to-restore>
       <window_info content_ui="combo" id="Project" order="0" sideWeight="0.49887386" visible="true" weight="0.17408018" />
@@ -455,7 +459,8 @@
     <MESSAGE value=" Update Create db, table" />
     <MESSAGE value=" Update databaseSql Class query from config file" />
     <MESSAGE value=" Update" />
-    <option name="LAST_COMMIT_MESSAGE" value=" Update" />
+    <MESSAGE value=" Update.." />
+    <option name="LAST_COMMIT_MESSAGE" value=" Update.." />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="true" />
   </component>
   <component name="editorHistoryManager">
@@ -598,13 +603,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/client/ClientAdd.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="210">
-          <caret line="22" column="46" selection-start-line="22" selection-start-column="46" selection-end-line="22" selection-end-column="46" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/client/ClientAdd.form">
       <provider selected="true" editor-type-id="ui-designer" />
     </entry>
@@ -680,30 +678,6 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/configPostgreSql.ini" />
     <entry file="file://$PROJECT_DIR$/src/main/configPostgreSql.ini" />
-    <entry file="file://$PROJECT_DIR$/src/main/java/database/dataBaseSql.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="793">
-          <caret line="472" column="6" selection-start-line="472" selection-start-column="6" selection-end-line="472" selection-end-column="6" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#17754#18484#0" expanded="true" />
-            <element signature="e#18490#18821#0" expanded="true" />
-            <element signature="e#18827#19393#0" expanded="true" />
-            <element signature="e#19399#19841#0" expanded="true" />
-            <element signature="e#19847#20084#0" expanded="true" />
-            <element signature="e#20090#20552#0" expanded="true" />
-            <element signature="e#20558#20913#0" expanded="true" />
-            <element signature="e#20958#21830#0" expanded="true" />
-            <element signature="e#21836#22081#0" expanded="true" />
-            <element signature="e#22087#23239#0" expanded="true" />
-            <element signature="e#23984#24655#0" expanded="true" />
-            <element signature="e#24661#24906#0" expanded="true" />
-            <element signature="e#24912#25428#0" expanded="true" />
-            <element signature="e#25434#25857#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/_config.yml">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
@@ -725,28 +699,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="453">
           <caret line="24" column="56" selection-start-line="24" selection-start-column="56" selection-end-line="24" selection-end-column="56" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/pom.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="819">
-          <caret line="39" column="49" lean-forward="true" selection-start-line="39" selection-start-column="49" selection-end-line="39" selection-end-column="49" />
-          <folding>
-            <element signature="n#resources#0;n#build#0;n#project#0;n#!!top" expanded="true" />
-            <element signature="n#resource#0;n#resources#0;n#build#0;n#project#0;n#!!top" expanded="true" />
-            <element signature="n#plugin#0;n#plugins#0;n#build#0;n#project#0;n#!!top" expanded="true" />
-            <element signature="n#configuration#0;n#plugin#0;n#plugins#0;n#build#0;n#project#0;n#!!top" expanded="true" />
-            <element signature="n#plugin#1;n#plugins#0;n#build#0;n#project#0;n#!!top" expanded="true" />
-            <element signature="n#configuration#0;n#plugin#1;n#plugins#0;n#build#0;n#project#0;n#!!top" expanded="true" />
-            <element signature="n#configuration#0;n#plugin#2;n#plugins#0;n#build#0;n#project#0;n#!!top" expanded="true" />
-            <element signature="n#archive#0;n#configuration#0;n#plugin#2;n#plugins#0;n#build#0;n#project#0;n#!!top" expanded="true" />
-            <element signature="n#manifest#0;n#archive#0;n#configuration#0;n#plugin#2;n#plugins#0;n#build#0;n#project#0;n#!!top" expanded="true" />
-            <element signature="n#dependencies#0;n#project#0;n#!!top" expanded="true" />
-            <element signature="n#dependency#0;n#dependencies#0;n#project#0;n#!!top" expanded="true" />
-            <element signature="n#dependency#1;n#dependencies#0;n#project#0;n#!!top" expanded="true" />
-            <element signature="n#dependency#2;n#dependencies#0;n#project#0;n#!!top" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -772,20 +724,80 @@
     <entry file="file://$PROJECT_DIR$/src/main/java/database/configPostgreSql.ini">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/database/Props.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/images/configPostgreSql.ini" />
+    <entry file="file://$PROJECT_DIR$/pom.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="206">
-          <caret line="77" column="57" selection-start-line="77" selection-start-column="57" selection-end-line="77" selection-end-column="57" />
+        <state relative-caret-position="298">
+          <caret line="40" column="32" lean-forward="true" selection-start-line="40" selection-start-column="32" selection-end-line="40" selection-end-column="32" />
           <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#2006#2007#0" expanded="true" />
-            <element signature="e#2039#2040#0" expanded="true" />
+            <element signature="n#resources#0;n#build#0;n#project#0;n#!!top" expanded="true" />
+            <element signature="n#resource#0;n#resources#0;n#build#0;n#project#0;n#!!top" expanded="true" />
+            <element signature="n#plugin#0;n#plugins#0;n#build#0;n#project#0;n#!!top" expanded="true" />
+            <element signature="n#configuration#0;n#plugin#0;n#plugins#0;n#build#0;n#project#0;n#!!top" expanded="true" />
+            <element signature="n#plugin#1;n#plugins#0;n#build#0;n#project#0;n#!!top" expanded="true" />
+            <element signature="n#configuration#0;n#plugin#1;n#plugins#0;n#build#0;n#project#0;n#!!top" expanded="true" />
+            <element signature="n#configuration#0;n#plugin#2;n#plugins#0;n#build#0;n#project#0;n#!!top" expanded="true" />
+            <element signature="n#archive#0;n#configuration#0;n#plugin#2;n#plugins#0;n#build#0;n#project#0;n#!!top" expanded="true" />
+            <element signature="n#manifest#0;n#archive#0;n#configuration#0;n#plugin#2;n#plugins#0;n#build#0;n#project#0;n#!!top" expanded="true" />
+            <element signature="n#dependencies#0;n#project#0;n#!!top" expanded="true" />
+            <element signature="n#dependency#0;n#dependencies#0;n#project#0;n#!!top" expanded="true" />
+            <element signature="n#dependency#1;n#dependencies#0;n#project#0;n#!!top" expanded="true" />
+            <element signature="n#dependency#2;n#dependencies#0;n#project#0;n#!!top" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/images/configPostgreSql.ini">
-      <provider selected="true" editor-type-id="text-editor" />
+    <entry file="file://$PROJECT_DIR$/src/main/java/client/ClientAdd.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="482">
+          <caret line="596" column="31" selection-start-line="596" selection-start-column="31" selection-end-line="596" selection-end-column="31" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/fileChooser/FileChooser.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="504">
+          <caret line="25" selection-start-line="25" selection-end-line="25" />
+          <folding>
+            <element signature="method#fileChooser#0;class#FileChooser#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/database/dataBaseSql.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="47">
+          <caret line="384" column="43" selection-start-line="384" selection-start-column="37" selection-end-line="384" selection-end-column="43" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#16526#17748#0" expanded="true" />
+            <element signature="e#17754#18484#0" expanded="true" />
+            <element signature="e#18490#18821#0" expanded="true" />
+            <element signature="e#18827#19393#0" expanded="true" />
+            <element signature="e#19399#19841#0" expanded="true" />
+            <element signature="e#19847#20084#0" expanded="true" />
+            <element signature="e#20090#20552#0" expanded="true" />
+            <element signature="e#20558#20913#0" expanded="true" />
+            <element signature="e#20958#21830#0" expanded="true" />
+            <element signature="e#21836#22081#0" expanded="true" />
+            <element signature="e#22087#23239#0" expanded="true" />
+            <element signature="e#23984#24655#0" expanded="true" />
+            <element signature="e#24661#24906#0" expanded="true" />
+            <element signature="e#24912#25428#0" expanded="true" />
+            <element signature="e#25434#25857#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/database/Props.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="88">
+          <caret line="67" column="18" selection-start-line="67" selection-start-column="18" selection-end-line="67" selection-end-column="18" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
     </entry>
   </component>
   <component name="masterDetails">
@@ -856,7 +868,7 @@
           <splitter-proportions>
             <option name="proportions">
               <list>
-                <option value="0.31149426" />
+                <option value="0.37775445" />
               </list>
             </option>
           </splitter-proportions>
@@ -864,11 +876,11 @@
       </state>
       <state key="ProjectLibrariesConfigurable.UI">
         <settings>
-          <last-edited>Maven: com.github.virtuald:curvesapi:1.06</last-edited>
+          <last-edited>Maven: org.apache.xmlbeans:xmlbeans:3.1.0</last-edited>
           <splitter-proportions>
             <option name="proportions">
               <list>
-                <option value="0.31149426" />
+                <option value="0.37775445" />
               </list>
             </option>
           </splitter-proportions>
