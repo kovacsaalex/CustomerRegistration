@@ -25,4 +25,7 @@ Plans:
 - [ ] Database connection properties from config file (url,user,passw)
 - [ ] Database connect to PostgreSql (now connect MySql), update querys. 
 - [ ] Database make in the cloud. (Heroku)
-
+- [ ] make pdf documents
+- [ ] monthly, yearly statics 
+- [ ] age/ loan term, age/saving statics etc. 
+- [ ] compare interest rate in singed contract with actual
