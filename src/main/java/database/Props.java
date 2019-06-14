@@ -1,6 +1,7 @@
 package database;
 
 import java.io.File;
+import java.io.FileInputStream;
 import java.io.IOException;
 import java.util.Properties;
 
@@ -71,9 +72,12 @@ class Props {
 
 
 
-            // FileInputStream fis = new FileInputStream("/configPostgreSql.ini");
-            // props.load(fis);
+             //FileInputStream fis = new FileInputStream("/Users/alexkovacs/Documents/Dev_Projects/CustomerRegistration/src/main/java/database/configSql.ini");
+             //props.load(fis);
             props.load(Props.class.getResourceAsStream("/configPostgreSql.ini"));
+            //props.load(Props.class.getResourceAsStream("/configSql.ini"));
+            
+            
             username = props.getProperty("usr");
             password = props.getProperty("passw");
             url = props.getProperty("url");

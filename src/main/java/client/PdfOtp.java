@@ -217,11 +217,11 @@ ReposDataBase adatok = new dataBaseSql();
 
             //Create PdfReader instance.
             PdfReader pdfReader
-                    = new PdfReader("/Users/alexkovacs/Documents/Dev_Projects/CustomerRegistration/Lakashitel_20190101.pdf");
+                    = new PdfReader("/Users/alexkovacs/Documents/Dev_Projects/CustomerRegistration/Lakashitel_20190101_szemelyes.pdf");
 
             //Create PdfStamper instance.
             PdfStamper pdfStamper = new PdfStamper(pdfReader,
-                    new FileOutputStream("/Users/alexkovacs/Documents/Dev_Projects/CustomerRegistration/Lakashitel_" + name + ".pdf"));
+                    new FileOutputStream("/Users/alexkovacs/Documents/Dev_Projects/CustomerRegistration/Lakashitel_szemelyes_" + name + ".pdf"));
 
             //Create BaseFont instance.
             BaseFont baseFont = BaseFont.createFont(
@@ -675,6 +675,55 @@ ReposDataBase adatok = new dataBaseSql();
             
             pageNumbber1.endText();
             
+            // 11. oldal
+            
+            PdfContentByte pageNumbber3 = pdfStamper.getOverContent(3);
+            
+            String cost = data.getBecsErtek()+"";
+            System.out.println(cost);
+            String amount = data.getOsszeg()+"";
+            System.out.println(data.getOsszeg());
+                pageNumbber3.beginText();
+                pageNumbber3.setFontAndSize(baseFont, 16);
+                
+            // vételár    
+                pageNumbber3.setTextMatrix(52, 650);
+                pageNumbber3.showText(String.valueOf(cost.charAt(0)));
+                pageNumbber3.setTextMatrix(66, 650);
+                pageNumbber3.showText(String.valueOf(cost.charAt(1)));
+                pageNumbber3.setTextMatrix(85, 650);
+                pageNumbber3.showText(String.valueOf(cost.charAt(2)));
+                pageNumbber3.setTextMatrix(98, 650);
+                pageNumbber3.showText(String.valueOf(cost.charAt(3)));
+                pageNumbber3.setTextMatrix(113, 650);
+                pageNumbber3.showText(String.valueOf(cost.charAt(4)));
+                pageNumbber3.setTextMatrix(132, 650);
+                pageNumbber3.showText(String.valueOf(cost.charAt(5)));
+                pageNumbber3.setTextMatrix(146, 650);
+                pageNumbber3.showText(String.valueOf(cost.charAt(6)));
+                pageNumbber3.setTextMatrix(162, 650);
+                pageNumbber3.showText(String.valueOf(cost.charAt(7)));
+            
+            // hitelösszeg
+                    
+                pageNumbber3.setTextMatrix(51, 255);
+                pageNumbber3.showText(String.valueOf(amount.charAt(0)));  
+                pageNumbber3.setTextMatrix(65, 255);
+                pageNumbber3.showText(String.valueOf(amount.charAt(1)));
+                pageNumbber3.setTextMatrix(84, 255);
+                pageNumbber3.showText(String.valueOf(amount.charAt(2)));
+                pageNumbber3.setTextMatrix(98, 255);
+                pageNumbber3.showText(String.valueOf(amount.charAt(3)));
+                pageNumbber3.setTextMatrix(114, 255);
+                pageNumbber3.showText(String.valueOf(amount.charAt(4)));
+                pageNumbber3.setTextMatrix(132, 255);
+                pageNumbber3.showText(String.valueOf(amount.charAt(5)));
+                pageNumbber3.setTextMatrix(146, 255);
+                pageNumbber3.showText(String.valueOf(amount.charAt(6)));
+                pageNumbber3.setTextMatrix(162, 255);
+                pageNumbber3.showText(String.valueOf(amount.charAt(7)));
+                
+                pageNumbber3.endText();
             
                   //Close the pdfStamper.
             pdfStamper.close();

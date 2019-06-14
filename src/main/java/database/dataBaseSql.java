@@ -13,11 +13,12 @@ import java.util.ArrayList;
 import java.util.List;
 
 /**
- * This class make SQL Query with MySql database
+ * This class make SQL Query 
  */
 public class dataBaseSql implements ReposDataBase {
 
-    DbConnectSql cn = new DbConnectSql();
+    
+   DbConnectSql cn = new DbConnectSql();
     Props props = new Props();
     int id = 0;
 
@@ -722,6 +723,5 @@ public class dataBaseSql implements ReposDataBase {
         //    System.out.println(loanlist.get(1).getLtpId());
 
     }
-
 
 }
