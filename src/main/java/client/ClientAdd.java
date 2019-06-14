@@ -590,9 +590,11 @@ public class ClientAdd extends javax.swing.JFrame {
                 Utel.setText("" + clientExcels.getTelSzam());
             }
 
-        } catch (IOException | IndexOutOfBoundsException e) {
+        } catch (IOException | IndexOutOfBoundsException  e) {
             System.out.println("e " + e.getMessage());
             JOptionPane.showMessageDialog(rootPane, "Nem található a fájl!");
+        }catch (NullPointerException ex){
+            System.out.println(ex.getMessage());
         }
         // regex check
         vNevRegex.setIcon(regex.check(regex.REGEXNAME, uVezetekNev.getText()));

@@ -15,7 +15,7 @@ import repository.ReposDataBase;
  *
  * @author alexkovacs
  */
-public class CLientList extends javax.swing.JFrame {
+public class CLientList extends javax.swing.JFrame  {
     private ReposDataBase adatok = new dataBaseSql();
     private List<Ltp> ltpList = new ArrayList<>();
     private List<Loan> loanlist = new ArrayList<>();
@@ -160,15 +160,16 @@ public class CLientList extends javax.swing.JFrame {
                        row[10] = " "+ clientList.get(i).getTajSzam();
                 row[11] = " "+ clientList.get(i).getIranyitoSzam();
                 row[12] = " "+ clientList.get(i).getVaros();
-                row[13] = " "+ clientList.get(i).getSzIgSzam();
-                row[14] = " "+ clientList.get(i).getLakCimSzam();
-                row[15] = " "+ clientList.get(i).getLakCim();
+                row[13] = " "+ clientList.get(i).getLakCim();
+                row[14] = " "+ clientList.get(i).getSzIgSzam();
+                row[15] = " "+ clientList.get(i).getLakCimSzam();
                 row[16] = " "+ clientList.get(i).getTelSzam();
               
                        model.addRow(row);
             }
                
-        } catch (SQLException | IndexOutOfBoundsException | NumberFormatException e) {
+        } catch (SQLException | IndexOutOfBoundsException | NumberFormatException | NullPointerException e) {
+
             System.out.println(e.getMessage());
         }
    

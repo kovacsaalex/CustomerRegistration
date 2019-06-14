@@ -5,10 +5,14 @@ import database.DbConnectSql;
 import ltp.LtpAdd;
 import loan.LoanAdd;
 import client.ClientAdd;
+import client.PdfOtp;
 import database.dataBaseSql;
 
 import java.sql.Connection;
 import java.sql.SQLException;
+import java.time.LocalDate;
+import java.time.Month;
+import javax.swing.JOptionPane;
 import lists.*;
 
 
@@ -22,7 +26,17 @@ public class Menu extends javax.swing.JFrame {
      * Creates new form Menu
      */
     public Menu() {
+         LocalDate date = LocalDate.now();
+         LocalDate Expired = LocalDate.of(2020, Month.JUNE, 12);
+        
+        if (date.isAfter(Expired)) {
+            System.out.println("Az előfizetés Lejárt!!");            
+            JOptionPane.showMessageDialog(rootPane, "Az előfizetés Lejárt!");
+            System.exit(0);
+        }else{
         initComponents();
+        }
+       
     }
 
     /**
@@ -59,6 +73,9 @@ public class Menu extends javax.swing.JFrame {
         ltpListMenu = new javax.swing.JMenuItem();
         jSeparator6 = new javax.swing.JPopupMenu.Separator();
         jMenuItem1 = new javax.swing.JMenuItem();
+        jMenuItem3 = new javax.swing.JMenuItem();
+        jMenu6 = new javax.swing.JMenu();
+        pdfOtpJob = new javax.swing.JMenuItem();
 
         jCheckBoxMenuItem1.setSelected(true);
         jCheckBoxMenuItem1.setText("jCheckBoxMenuItem1");
@@ -166,7 +183,22 @@ public class Menu extends javax.swing.JFrame {
         });
         ListOut.add(jMenuItem1);
 
+        jMenuItem3.setText("jMenuItem3");
+        ListOut.add(jMenuItem3);
+
         jMenuBar1.add(ListOut);
+
+        jMenu6.setText("PDF");
+
+        pdfOtpJob.setText("Otp Munkáltatói");
+        pdfOtpJob.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                pdfOtpJobActionPerformed(evt);
+            }
+        });
+        jMenu6.add(pdfOtpJob);
+
+        jMenuBar1.add(jMenu6);
 
         setJMenuBar(jMenuBar1);
 
@@ -228,6 +260,10 @@ public class Menu extends javax.swing.JFrame {
         new AllList().setVisible(true);
     }//GEN-LAST:event_jMenuItem1ActionPerformed
 
+    private void pdfOtpJobActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_pdfOtpJobActionPerformed
+        new PdfOtp().setVisible(true);
+    }//GEN-LAST:event_pdfOtpJobActionPerformed
+
     /**
      * @param args the command line arguments
      */
@@ -277,10 +313,12 @@ public class Menu extends javax.swing.JFrame {
     private javax.swing.JMenu jMenu3;
     private javax.swing.JMenu jMenu4;
     private javax.swing.JMenu jMenu5;
+    private javax.swing.JMenu jMenu6;
     private javax.swing.JMenuBar jMenuBar1;
     private javax.swing.JMenuBar jMenuBar2;
     private javax.swing.JMenuItem jMenuItem1;
     private javax.swing.JMenuItem jMenuItem2;
+    private javax.swing.JMenuItem jMenuItem3;
     private javax.swing.JRadioButtonMenuItem jRadioButtonMenuItem1;
     private javax.swing.JPopupMenu.Separator jSeparator1;
     private javax.swing.JSeparator jSeparator2;
@@ -290,6 +328,7 @@ public class Menu extends javax.swing.JFrame {
     private javax.swing.JPopupMenu.Separator jSeparator6;
     private javax.swing.JMenuItem ltpListMenu;
     private javax.swing.JMenuItem ltpadd;
+    private javax.swing.JMenuItem pdfOtpJob;
     private javax.swing.JMenuItem ujUgyfelAdd;
     // End of variables declaration//GEN-END:variables
 }

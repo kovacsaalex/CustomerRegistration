@@ -67,9 +67,13 @@ public class dataBaseSql implements ReposDataBase {
             insertNewClient.setInt(10, adat.getIranyitoSzam());
             insertNewClient.setString(11, adat.getVaros());
             insertNewClient.setString(12, adat.getLakCim());
+            System.out.println("/*/*/*/*/*/*/*/*/*/*/*/*/*/");
+            System.out.println("Adat: Lakcím: "+ adat.getLakCim());
             insertNewClient.setString(13, adat.getLakhelyido());
             insertNewClient.setString(14, adat.getSzIgSzam());
+            System.out.println("Id: "+ adat.getSzIgSzam());
             insertNewClient.setString(15, adat.getLakCimSzam());
+            System.out.println("Lak: "+ adat.getLakCimSzam());
             insertNewClient.setString(16, adat.getTelSzam());
 
             // if you use MySql - use this
@@ -145,7 +149,7 @@ public class dataBaseSql implements ReposDataBase {
      * List all clients from the database
      */
     @Override
-    public List<Client> findAllClients() throws SQLException {
+    public List<Client> findAllClients() throws SQLException, NullPointerException {
         ResultSet all = this.getConnection().prepareStatement(props.getFindAllClients()).executeQuery();
         List<Client> ret = makeList(all);
         return ret;
@@ -191,7 +195,7 @@ public class dataBaseSql implements ReposDataBase {
      * @param client
      */
     @Override
-    public void update(Client client) throws SQLException {
+    public void update(Client client) throws SQLException, NullPointerException {
 
         PreparedStatement clientUpdate = this.getConnection().prepareStatement(props.getClientUpdate());
 
@@ -225,7 +229,7 @@ public class dataBaseSql implements ReposDataBase {
         clientUpdate.executeUpdate();
     }
 
-    private List<Client> makeList(ResultSet rs) throws SQLException {
+    private List<Client> makeList(ResultSet rs) throws SQLException, NullPointerException {
         List<Client> ret = new ArrayList<>();
         while (rs.next()) {
             ret.add(makeOne(rs));
@@ -234,7 +238,8 @@ public class dataBaseSql implements ReposDataBase {
     }
 
 
-    private Client makeOne(ResultSet rs) throws SQLException {
+    private Client makeOne(ResultSet rs) throws SQLException{
+      
         Client sz = new Client();
         sz.setId(rs.getInt("id"));
         sz.setVezetekNev(rs.getString("Last_Name"));
@@ -249,9 +254,16 @@ public class dataBaseSql implements ReposDataBase {
         sz.setIranyitoSzam(rs.getInt("Postal_Code"));
         sz.setVaros(rs.getString("City"));
         sz.setLakCim(rs.getString("Address"));
+        System.out.println("//////////////////////");
+        System.out.println(rs.getString("Address"));
+        
         sz.setLakhelyido(rs.getString("Moving_Time"));
         sz.setSzIgSzam(rs.getString("ID_Card_Number"));
-        sz.setLakCim(rs.getString("Address_Card_Number"));
+        System.out.println("Id: "+rs.getString("ID_Card_Number"));
+        
+        sz.setLakCimSzam(rs.getString("Address_Card_Number"));
+         System.out.println("Lakcím: "+rs.getString("Address_Card_Number"));
+         System.out.println("//////////////////////");
         sz.setTelSzam(rs.getString("Phone_Number"));
         System.out.println(rs.getDate("Birth_date"));
 
@@ -259,13 +271,15 @@ public class dataBaseSql implements ReposDataBase {
         //  sz.setSzulIdo(rs.getDate("Birth_date").toLocalDate());
 
         // if you use PostgreSql use this
-       try {
+         try {
             sz.setSzulIdo(rs.getDate("Birth_date").toLocalDate());
+            
         } catch (SQLException | NullPointerException e) {
-            e.printStackTrace();
+           // System.out.println("Hiányzó adat! (DatabaseSql) "+e.getLocalizedMessage());
+           e.getLocalizedMessage();
         }
 
-        return sz;
+       return sz;
 
     }
 

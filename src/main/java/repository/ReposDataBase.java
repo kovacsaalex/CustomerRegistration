@@ -31,7 +31,7 @@ public interface ReposDataBase {
     void update(Ltp ltp);
 
     // lekérdezések
-    List<Client> findAllClients() throws SQLException;
+    List<Client> findAllClients() throws SQLException, NullPointerException;
 
     List<Loan> findAllLoans() throws SQLException;
 
