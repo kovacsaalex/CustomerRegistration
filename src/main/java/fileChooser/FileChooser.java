@@ -1,7 +1,6 @@
 package fileChooser;
 
-import javax.swing.JButton;
-import javax.swing.JFileChooser;
+import javax.swing.*;
 
 /**
  * Choose excel file to import data
