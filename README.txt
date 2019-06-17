@@ -23,7 +23,7 @@ Plans:
 
 - [ ] Database check db and table exists if not create from config file (dbName,tableName,columns, etc)
 - [ ] Database connection properties from config file (url,user,passw)
-- [ ] Database connect to PostgreSql (now connect MySql), update querys. 
+- [ ] Database connect to  MySql, update querys. 
 - [ ] Database make in the cloud. (Heroku)
 - [ ] make pdf documents
 - [ ] monthly, yearly statics 
